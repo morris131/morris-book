@@ -3,7 +3,7 @@
 * [目录](SUMMARY.md)
 * java技术
   * [java基础](java技术/java基础)
-  * [JVM](java技术/jvm)
+  * [JVM](java技术/JVM)
 * 前端开发
 * 基础知识
   * [git](基础知识/git)
