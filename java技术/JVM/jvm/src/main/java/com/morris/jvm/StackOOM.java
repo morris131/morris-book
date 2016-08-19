@@ -1,7 +1,7 @@
 package com.morris.jvm;
 
 /**
- * VM args:-Xss2m
+ * VM args:-Xss200m
  * @author Morris
  *
  */

@@ -67,6 +67,34 @@ public class StackSOF {
 Exception in thread "main" java.lang.StackOverflowError
 ```
 
-#### 方法区溢出
-
 #### 直接内存溢出
+```java
+package com.morris.jvm;
+
+import java.lang.reflect.Field;
+import sun.misc.Unsafe;
+
+/**
+ * vm args:-Xmx20M -XX:MaxDirectMemorySize=10M
+ * @author morris
+ *
+ */
+public class DirectMemoryOOM {
+	@SuppressWarnings("restriction")
+	public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException {
+		Field field =Unsafe.class.getDeclaredFields()[0];
+		field.setAccessible(true);
+		
+		Unsafe unsafe = (Unsafe) field.get(null);
+		
+		while(true) {
+			unsafe.allocateMemory(1024*1024);
+		}
+	}
+}
+```
+```java
+Exception in thread "main" java.lang.OutOfMemoryError
+	at sun.misc.Unsafe.allocateMemory(Native Method)
+	at com.morris.jvm.DirectMemoryOOM.main(DirectMemoryOOM.java:20)
+```
