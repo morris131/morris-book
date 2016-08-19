@@ -8,8 +8,9 @@ import sun.misc.Unsafe;
  * @author morris
  *
  */
+@SuppressWarnings("restriction")
 public class DirectMemoryOOM {
-	@SuppressWarnings("restriction")
+	
 	public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException {
 		Field field =Unsafe.class.getDeclaredFields()[0];
 		field.setAccessible(true);

@@ -79,8 +79,9 @@ import sun.misc.Unsafe;
  * @author morris
  *
  */
+@SuppressWarnings("restriction")
 public class DirectMemoryOOM {
-	@SuppressWarnings("restriction")
+	
 	public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException {
 		Field field =Unsafe.class.getDeclaredFields()[0];
 		field.setAccessible(true);
@@ -96,5 +97,5 @@ public class DirectMemoryOOM {
 ```java
 Exception in thread "main" java.lang.OutOfMemoryError
 	at sun.misc.Unsafe.allocateMemory(Native Method)
-	at com.morris.jvm.DirectMemoryOOM.main(DirectMemoryOOM.java:20)
+	at com.morris.jvm.DirectMemoryOOM.main(DirectMemoryOOM.java:21)
 ```
