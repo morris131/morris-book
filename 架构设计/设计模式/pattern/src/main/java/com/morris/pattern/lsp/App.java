@@ -7,5 +7,4 @@ public class App {
 		//Rectangle rectangle = new Square(10, 20);
 		System.out.println(rectangle.calcArea());
 	}
-
 }
