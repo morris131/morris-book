@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 ### Windows下安装MongoDB
 #### 下载MongoDB安装包
 官网下载地址： https://www.mongodb.org  选择Windows的安装包下载
 
 
 #### 安装MongoDB
+=======
+下载MongoDB安装包
+官网下载地址： https://www.mongodb.org  选择Windows的安装包下载
+
+
+安装MongoDB
+>>>>>>> 42afd59c5a20a76739fcd518c4dd43c89e18fdbd
 根据你的系统下载 32 位或 64 位的 .msi 文件，下载后双击该文件，按操作提示安装即可。 安装过程中，你可以通过点击 "Custom(自定义)" 按钮来设置你的安装目录。
 
 
