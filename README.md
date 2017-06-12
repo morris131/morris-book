@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 # 目录
 
-* [目录](SUMMARY.md)
 * 移动开发
   * [Android](移动开发/Android)
   * [IOS](移动开发/IOS)
@@ -13,19 +11,15 @@
   * [HTML&CSS](前端开发/HTML&CSS)
   * [jQuery](前端开发/jQuery)
 * 数据库
-  * [MySQL]()
-  * [Oracle]() 
+  * [MySQL](数据库/MySQL)
+  * [Oracle](数据库/Oracle) 
   * [MongoDB](数据库/MongoDB)
 * 大数据&云计算
 * 开发工具
+  * [IDE](开发工具/IDE)
+  * [代码托管](开发工具/代码托管)
+  * [自动化](开发工具/自动化)
 * 服务器
   * [LVS](架构设计/LVS)
   * [Nginx](架构设计/Nginx)
   * [设计模式](架构设计/设计模式)
-
-=======
-# morris-bookpp
-
-
-fff
->>>>>>> 42afd59c5a20a76739fcd518c4dd43c89e18fdbd
