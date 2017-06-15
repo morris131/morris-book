@@ -2,6 +2,9 @@
 
 1. User实体定义：
 
+
+详细代码参考[User.java](projects/chapter4/src/main/java/com/morris/domain/User.java)
+
 ```java
 package com.morris.domain;
 
@@ -54,6 +57,8 @@ public class User {
 
 2. 对User对象的操作接口:
 
+详细代码参考[UserApiController.java](projects/chapter4/src/main/java/com/morris/web/UserApiController.java)
+
 ```java
 package com.morris.web;
 
@@ -101,6 +106,8 @@ public class UserApiController {
 ```
 
 3. 单元测试
+
+详细代码参考[Chapter4ApplicationTests.java](projects/chapter4/src/test/java/com/morris/web/Chapter4ApplicationTests.java)
 
 ```java
 package com.morris;

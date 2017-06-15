@@ -127,7 +127,7 @@ public class HelloController {
 
 3. 编写jsp页面
 
-详细代码参考[hello.jsp](projects/chapter3/src/main/webapp/WEB-INFO/jsp/hello.jsp)
+详细代码参考[hello.jsp](projects/chapter3/src/main/webapp/WEB-INF/jsp/hello.jsp)
 
 ```html
 <!DOCTYPE html>
