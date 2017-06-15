@@ -16,6 +16,8 @@ Spring Boot建议使用这些模板引擎，避免使用JSP，若一定要使用JSP将无法实现Spring Bo
 
 1. 新建spring boot工程，添加模块引擎依赖
 
+详细代码参考[pom.xml](projects/chapter2/pom.xml)
+
 ```xml
     <dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -24,6 +26,8 @@ Spring Boot建议使用这些模板引擎，避免使用JSP，若一定要使用JSP将无法实现Spring Bo
 ```
 
 2. 编写控制层HelloController
+
+详细代码参考[HelloController.java](projects/chapter2/src/main/java/com/morris/web/HelloController.java)
 
 ```java
 package com.morris.web;
@@ -48,6 +52,8 @@ public class HelloController {
 ```
 
 3. 编写html页面
+
+详细代码参考[hello.html](projects/chapter2/src/main/resources/templates/hello.html)
 
 ```html
 <!DOCTYPE html>
