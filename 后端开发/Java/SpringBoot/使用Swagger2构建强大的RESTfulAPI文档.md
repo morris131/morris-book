@@ -10,6 +10,8 @@
 
 1. 添加Swagger2依赖
 
+详细代码参考[pom.xml](projects/chapter5/pom.xml)
+
 ```xml
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -25,6 +27,8 @@
 ```
 
 2. 创建Swagger2配置类
+
+详细代码参考[Swagger2.java](projects/chapter5/src/main/java/com/morris/Swagger2.java)
 
 ```java
 package com.morris;
@@ -72,6 +76,8 @@ public class Swagger2 {
 3. 添加文档内容
 
 在完成了上述配置后，其实已经可以生产文档内容，但是这样的文档主要针对请求本身，而描述主要来源于函数等命名产生，对用户并不友好，我们通常需要自己增加一些说明来丰富文档内容。如下所示，我们通过@ApiOperation注解来给API增加说明、通过@ApiImplicitParams、@ApiImplicitParam注解来给参数增加说明。
+
+详细代码参考[UserApiController.java](projects/chapter5/src/main/java/com/morris/web/UserApiController.java)
 
 ```java
 package com.morris.web;

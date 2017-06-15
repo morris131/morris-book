@@ -107,7 +107,7 @@ public class UserApiController {
 
 3. 单元测试
 
-详细代码参考[Chapter4ApplicationTests.java](projects/chapter4/src/test/java/com/morris/web/Chapter4ApplicationTests.java)
+详细代码参考[Chapter4ApplicationTests.java](projects/chapter4/src/test/java/com/morris/Chapter4ApplicationTests.java)
 
 ```java
 package com.morris;
