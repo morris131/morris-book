@@ -1,5 +1,7 @@
 1. 新建spring boot项目，编写pom.xml
 
+详细代码参考[pom.xml](projects/chapter3/pom.xml)
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -97,6 +99,8 @@
 
 2. 编写HelloController
 
+详细代码参考[HelloController.java](projects/chapter3/src/main/java/com/morris/web/HelloController.java)
+
 ```java
 package com.morris.web;
 
@@ -123,6 +127,8 @@ public class HelloController {
 
 3. 编写jsp页面
 
+详细代码参考[hello.jsp](projects/chapter3/src/main/webapp/WEB-INFO/jsp/hello.jsp)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -133,6 +139,8 @@ public class HelloController {
 ```
 
 4. 在配置文件application.properties中添加
+
+详细代码参考[application.properties](projects/chapter3/src/main/resources/application.properties)
 
 ```bash
 spring.mvc.view.prefix=/WEB-INF/jsp/
