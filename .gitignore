@@ -3,3 +3,8 @@ target/
 .settings/
 .classpath
 .project
+.idea
+.mvn
+*.iml
+mvnw
+mvnw.cmd
