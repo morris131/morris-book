@@ -30,7 +30,7 @@ spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito
 
 引入Web模块，需添加spring-boot-starter-web模块
 
-[pom.xml](projects/chapter1/pom.xml)
+详细代码参考[pom.xml](projects/chapter1/pom.xml)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -87,6 +87,8 @@ spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito
 ```
 
 4. 编写HelloWorld服务
+
+详细代码参考[HelloWorldController.java](projects/chapter1/src/main/java/com/morris/web/HelloWorldController.java)
 
 ```java
 package com.morris.web;
