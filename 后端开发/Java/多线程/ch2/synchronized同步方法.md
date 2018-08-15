@@ -1,11 +1,11 @@
-## synchronizedͬ������
-### synchronized������
+## synchronized同步方法
+### synchronized锁对象
 ```java
 package com.morris.ch2;
 
 /**
- * 1) ��һ���߳��ȳ���a����������ڶ����̵߳���a�����synchronized�ķ�����ȴ���Ҳ����ͬ���� 
- * 2) ��һ���߳��ȳ���a����������������߳̿������첽����ʽ����a����ķ�synchronized�ķ����� 
+ * 1) 第一个线程先持有a对象的锁，第二个线程调用a对象的synchronized的方法需等待，也就是同步。 
+ * 2) 第一个线程先持有a对象的锁，第三个线程可以以异步的形式调用a对象的非synchronized的方法。 
  *
  */
 public class SynchronizedMethod {
@@ -44,19 +44,19 @@ class A {
 
 ```
 
-### synchronized�ļ̳���
+### synchronized的继承性
 
-����̳и���ʱ,���û����д�����е�ͬ������,����ͬһ����,�ڲ�ͬ�̲߳������ø÷���ʱ,����ͬ��Ч����
+子类继承父类时,如果没有重写父类中的同步方法,子类同一对象,在不同线程并发调用该方法时,具有同步效果。
 
-����̳и���,������д�����е�ͬ������,��û�����ӹؼ���synchronized,����ͬһ����,�ڲ�ͬ�̲߳������ø÷���ʱ,���پ���ͬ��Ч����
+子类继承父类,并且重写父类中的同步方法,但没有添加关键字synchronized,子类同一对象,在不同线程并发调用该方法时,不再具有同步效果。
 
-#### �̳в���д
+#### 继承不重写
 ```java
 package com.morris.ch2;
 
 /**
  * 
- * ����̳и���ʱ,���û����д�����е�ͬ������,����ͬһ����,�ڲ�ͬ�̲߳������ø÷���ʱ,����ͬ��Ч����
+ * 子类继承父类时,如果没有重写父类中的同步方法,子类同一对象,在不同线程并发调用该方法时,具有同步效果。
  *
  */
 public class SynchronizedHaveInheritance {
@@ -125,12 +125,12 @@ class Sub2 extends Father2 {
 
 ```
 
-#### �̳в���д
+#### 继承并重写
 ```java
 package com.morris.ch2;
 
 /**
- * ����̳и���,������д�����е�ͬ������,��û�����ӹؼ���synchronized,����ͬһ����,�ڲ�ͬ�̲߳������ø÷���ʱ,���پ���ͬ��Ч��
+ * 子类继承父类,并且重写父类中的同步方法,但没有添加关键字synchronized,子类同一对象,在不同线程并发调用该方法时,不再具有同步效果
  *
  */
 public class SynchronizedNotHaveInheritance {

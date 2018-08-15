@@ -1,8 +1,8 @@
-## synchronizedÀà
+## synchronizedç±»
 
-### synchronizedÍ¬²½¾²Ì¬·½·¨ºÍclass´úÂë¿é
+### synchronizedåŒæ­¥é™æ€æ–¹æ³•å’Œclassä»£ç å—
 
-synchronized¼Óµ½¾²Ì¬·½·¨ÉÏÊÇ¸øClass¶ÔÏóÉÏËø£¬¶øsynchronized¼Óµ½·Ç¾²Ì¬·½·¨ÉÏÊÇ¸ø¶ÔÏóÉÏËø¡£
+synchronizedåŠ åˆ°é™æ€æ–¹æ³•ä¸Šæ˜¯ç»™Classå¯¹è±¡ä¸Šé”ï¼Œè€ŒsynchronizedåŠ åˆ°éé™æ€æ–¹æ³•ä¸Šæ˜¯ç»™å¯¹è±¡ä¸Šé”ã€‚
 
 ```java
 package com.morris.ch2;

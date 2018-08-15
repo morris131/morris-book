@@ -1,16 +1,16 @@
-## synchronizedÍ¬²½´úÂë¿é
+## synchronizedåŒæ­¥ä»£ç å—
 
 ### synchronized(this)
-µ±Á½¸öÏß³ÌÍ¬Ê±·ÃÎÊÍ¬Ò»¸ö¶ÔÏóobjectµÄsynchronized(this)´úÂë¿éÊ±£¬Ò»¶ÎÊ±¼äÄÚÖ»ÓÐÒ»¸öÏß³ÌÄÜÖ´ÐÐ£¬ÁíÒ»¸öÏß³Ì±ØÐëµÈµ½µ±ÆÚÏß³ÌÖ´ÐÐÍê±Ïºó²ÅÄÜÖ´ÐÐ¡£
+å½“ä¸¤ä¸ªçº¿ç¨‹åŒæ—¶è®¿é—®åŒä¸€ä¸ªå¯¹è±¡objectçš„synchronized(this)ä»£ç å—æ—¶ï¼Œä¸€æ®µæ—¶é—´å†…åªæœ‰ä¸€ä¸ªçº¿ç¨‹èƒ½æ‰§è¡Œï¼Œå¦ä¸€ä¸ªçº¿ç¨‹å¿…é¡»ç­‰åˆ°å½“æœŸçº¿ç¨‹æ‰§è¡Œå®Œæ¯•åŽæ‰èƒ½æ‰§è¡Œã€‚
 
-synchronized(this)ÓësynchronizedÍ¬²½·½·¨Ò»Ñù£¬³ÖÓÐµÄÊÇµ±Ç°¶ÔÏóµÄËø¡£
+synchronized(this)ä¸ŽsynchronizedåŒæ­¥æ–¹æ³•ä¸€æ ·ï¼ŒæŒæœ‰çš„æ˜¯å½“å‰å¯¹è±¡çš„é”ã€‚
 
 ```java
 package com.morris.ch2;
 
 /**
- * 1) µÚÒ»¸öÏß³ÌÏÈ³ÖÓÐb¶ÔÏóµÄËø£¬µÚ¶þ¸öÏß³Ìµ÷ÓÃa¶ÔÏóµÄsynchronizedµÄ·½·¨»òÕßµ÷ÓÃÆäËûsynchronized (this)´úÂë¿éÐèµÈ´ý£¬Ò²¾ÍÊÇÍ¬²½¡£ 
- * 2) µÚÒ»¸öÏß³ÌÏÈ³ÖÓÐb¶ÔÏóµÄËø£¬µÚÈý¸öÏß³Ì¿ÉÒÔÒÔÒì²½µÄÐÎÊ½µ÷ÓÃa¶ÔÏóµÄ·ÇsynchronizedµÄ·½·¨¡£ 
+ * 1) ç¬¬ä¸€ä¸ªçº¿ç¨‹å…ˆæŒæœ‰bå¯¹è±¡çš„é”ï¼Œç¬¬äºŒä¸ªçº¿ç¨‹è°ƒç”¨aå¯¹è±¡çš„synchronizedçš„æ–¹æ³•æˆ–è€…è°ƒç”¨å…¶ä»–synchronized (this)ä»£ç å—éœ€ç­‰å¾…ï¼Œä¹Ÿå°±æ˜¯åŒæ­¥ã€‚ 
+ * 2) ç¬¬ä¸€ä¸ªçº¿ç¨‹å…ˆæŒæœ‰bå¯¹è±¡çš„é”ï¼Œç¬¬ä¸‰ä¸ªçº¿ç¨‹å¯ä»¥ä»¥å¼‚æ­¥çš„å½¢å¼è°ƒç”¨aå¯¹è±¡çš„éžsynchronizedçš„æ–¹æ³•ã€‚ 
  *
  */
 public class SynchronizedThis {
@@ -53,13 +53,13 @@ class B {
 
 ### synchronized(object)
 
-µ±¶à¸öÏß³ÌÍ¬Ê±Ö´ÐÐsynchronized(object)´úÂë¿éÊ±³ÊÍ¬²½Ð§¹û¡£
+å½“å¤šä¸ªçº¿ç¨‹åŒæ—¶æ‰§è¡Œsynchronized(object)ä»£ç å—æ—¶å‘ˆåŒæ­¥æ•ˆæžœã€‚
 
-µ±ÆäËûÏß³ÌÖ´ÐÐobject¶ÔÏóÖÐµÄsynchronized·½Ê½Ê±³ÊÍ¬²½Ð§¹û¡£
+å½“å…¶ä»–çº¿ç¨‹æ‰§è¡Œobjectå¯¹è±¡ä¸­çš„synchronizedæ–¹å¼æ—¶å‘ˆåŒæ­¥æ•ˆæžœã€‚
 
-µ±ÆäËûÏß³ÌÖ´ÐÐobject¶ÔÏóÖÐµÄsynchronized(this)´úÂë¿éÊ±³ÊÍ¬²½Ð§¹û¡£
+å½“å…¶ä»–çº¿ç¨‹æ‰§è¡Œobjectå¯¹è±¡ä¸­çš„synchronized(this)ä»£ç å—æ—¶å‘ˆåŒæ­¥æ•ˆæžœã€‚
 
-ÆäËûÏß³Ì¿ÉÒÔÒì²½µ÷ÓÃobject¶ÔÏóÖÐµÄ·Çsynchronized·½·¨¡£
+å…¶ä»–çº¿ç¨‹å¯ä»¥å¼‚æ­¥è°ƒç”¨objectå¯¹è±¡ä¸­çš„éžsynchronizedæ–¹æ³•ã€‚
 
 
 
