@@ -1,11 +1,10 @@
-package com.morris.jvm;
+package com.morris.jvm.oom;
 
 import java.lang.reflect.Field;
 import sun.misc.Unsafe;
 
 /**
- * vm args:-Xmx20M -XX:MaxDirectMemorySize=10M
- * @author morris
+ * VM args:-Xmx20M -XX:MaxDirectMemorySize=10M
  *
  */
 @SuppressWarnings("restriction")
