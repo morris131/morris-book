@@ -1,6 +1,6 @@
-## ArrayList的四种遍历方式与fail-fast
+## ArrayList的遍历方式与fail-fast
 
-### 四种遍历方式
+### 遍历方式
 1. 普通for循环
 2. Iterator迭代
 3. 增强for循环
