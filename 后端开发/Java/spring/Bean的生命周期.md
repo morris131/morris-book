@@ -1,16 +1,27 @@
+---
+title: Bean的生命周期
+date: 2018-09-12 14:29:22
+tags: spring
+---
+
+# Bean的生命周期
+
+## POJO
+- PO（Persistent Object）：持久对象，与数据库中的表相映射的Java对象，对应数据库中某个表中的一条记录。PO不包含业务逻辑和数据逻辑，就是一个Entity。
+- VO（Value Object）：值对象,通常用于业务层之间的数据传递，和PO一样也是仅仅包含数据而已。但应是抽象出的业务对象，可以和表对应，也可以不，这根据业务的需要。
+- BO（Business Object）：业务对象层，封装业务逻辑的java对象，通过调用DAO方法，结合PO,VO进行业务操作。它就是一个对PO的组合，也可以就是PO，只是出发点是满足业务的传输对象。
+- DTO（Data Transfer Object）：数据传输对象，单纯用来数据传输的对象。
+- POJO（Plain Ordinary Java Object）：简单的Java对象，实际就是普通JavaBeans。包含DTO、VO 、BO、PO等。
+
 ## Bean的五种作用域
 在Spring中，那些组成应用程序的主体及由Spring IoC容器所管理的对象，被称之为Bean。简单地讲，bean就是由IoC容器初始化、装配及管理的对象，除此之外，bean就与应用程序中的其他对象没有什么区别了。而bean的定义以及bean相互间的依赖关系将通过配置元数据来描述。
 
 下面就是Spring直接支持的五种作用域了，当然开发者也可以自己定制作用域。
-
-
-作用域 | 作用域
----|---
-singleton | 容器中仅存在一个对象，默认值
-prototype |	每调用一次getBean()，都返回一个新的对象
-request | 每一个HTTP请求会产生一个Bean对象
-session| 同一个Http Session共用一个Bean	
-global session|	类似于seesion作用域，仅在portletweb应用中有意义
+- singleton：容器中仅存在一个对象，默认值
+- prototype：每调用一次getBean()，都返回一个新的对象
+- request：每一个HTTP请求会产生一个Bean对象
+- session：同一个Http Session共用一个Bean	
+- global session：类似于seesion作用域，仅在portletweb应用中有意义
 
 说明：request,session以及global session这三个作用域都是只有在基于web的SpringApplicationContext实现的（比如XmlWebApplicationContext）中才能使用。 如果开发者仅仅在常规的Spring IoC容器中比如ClassPathXmlApplicationContext中使用这些作用域，那么将会抛出一个IllegalStateException来说明使用了未知的作用域。
 
