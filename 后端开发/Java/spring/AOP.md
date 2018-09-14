@@ -1,56 +1,69 @@
-## AOP
+---
+title: AOP
+date: 2018-09-13 15:02:17
+categories: spring
+tags: [spring, aop, 通知]
+---
+
+# AOP
 AOP(Aspect Oriented Programming)，即面向切面编程。所谓"切面"，简单说就是那些与业务无关，却为业务模块所共同调用的逻辑或责任封装起来，便于减少系统的重复代码，降低模块之间的耦合度，并有利于未来的可操作性和可维护性。
 
 AOP把软件系统分为两个部分：核心关注点和横切关注点。业务处理的主要流程是核心关注点，与之关系不大的部分是横切关注点。横切关注点的一个特点是，他们经常发生在核心关注点的多处，而各处基本相似，比如权限认证、日志、事物。AOP的作用在于分离系统中的各种关注点，将核心关注点和横切关注点分离开来。
 
-### AOP 术语
-- Aspect(切面):切面是通知和切点的结合。通知和切点定义了切面的全部内容——它是什么，在何时何处完成其功能。
-- Advice(通知):通知定义了切面是什么以及何时使用，应该应用在某个方法被调用之前？之后？还是抛出异常时？等等。
-- JointPoint(连接点):连接点是在应用执行过程中能够插入切面的一个点。
-- Pointcut(切入点):切点有助于缩小切面所通知的连接点的范围。如果说通知定义了切面的“什么”和“何时”的话，那么切点就定义了“何处”，切点会匹配通知所要织入的一个或多个连接点，一般常用正则表达式定义所匹配的类和方法名称来指定这些切点。
-- AOP代理：AOP框架创建的对象，代理就是目标对象的加强。
-- 引入 Introduction:引入允许我们向现有的类添加新方法或属性，从而无需修改这些现有类的情况下，让他们具有新的行为和状态。
-- 织入 Weaving:在过去我常常把织入与引入的概念混淆，我是这样来辨别的，“引入”我把它看做是一个定义，也就是一个名词，而“织入”我把它看做是一个动作，一个动词，也就是切面在指定的连接点被织入到目标对象中。
+## AOP 术语
+- 切面(Aspect):切面是通知和切点的结合。通知和切点定义了切面的全部内容——它是什么，在何时何处完成其功能。
+- 通知(Advice):通知定义了切面是什么以及何时使用，应该应用在某个方法被调用之前？之后？还是抛出异常时？等等。
+- 连接点(JointPoint):连接点是在应用执行过程中能够插入切面的一个点。
+- 切入点(Pointcut):切点有助于缩小切面所通知的连接点的范围。如果说通知定义了切面的“什么”和“何时”的话，那么切点就定义了“何处”，切点会匹配通知所要织入的一个或多个连接点，一般常用正则表达式定义所匹配的类和方法名称来指定这些切点。
+- 引入(Introduction):引入允许我们向现有的类添加新方法或属性，从而无需修改这些现有类的情况下，让他们具有新的行为和状态。
+- 织入(Weaving): 织入是把切面应用到目标对象并创建新的代理对象的过程。切面在指定的连接点被织入到目标对象中。
 
-### 通知的类型
+说明：织入是对方法的增强，引入是对类的增强。
+
+## 通知的类型
 - 前置通知: 在一个方法执行之前，执行通知。
 - 后置通知: 在一个方法执行之后，不考虑其结果，执行通知。
 - 返回后通知:	在一个方法执行之后，只有在方法成功完成时，才能执行通知。
 - 抛出异常后通知:在一个方法执行之后，只有在方法退出抛出异常时，才能执行通知。
 - 环绕通知:在方法调用之前和之后，执行通知。
 
-### 编程方式通知
+## spring提供的通知
+Spring支持五种类型的通知：
+- Before(前)：org.apringframework.aop.MethodBeforeAdvice
+- After-returning(返回后)：org.springframework.aop.AfterReturningAdvice
+- After-throwing(抛出后)：org.springframework.aop.ThrowsAdvice
+- Arround(周围)：org.aopaliance.intercept.MethodInterceptor
+- Introduction(引入)：org.springframework.aop.IntroductionInterceptor
+
+说明：周围通知，他是由AOP Alliance中的接口定义的而非Spring,周围通知相当于前通知、返回后通知的结合。
+
+## 基于代理的AOP
 
 接口IUserService
 ```
-package com.morris.spring.aop;
+package com.morris.spring.aop.agent;
 
 public interface IUserService {
-	
-	String login(String name);
-
+	String hello(String name);
 }
-
 ```
 接口IUserService实现类UserServiceImpl
 
 ```
-package com.morris.spring.aop;
+package com.morris.spring.aop.agent;
 
 public class UserServiceImpl implements IUserService {
 
 	@Override
-	public String login(String name) {
+	public String hello(String name) {
 		return "hello " + name;
 	}
-
 }
-
 ```
 通知实现类UserServiceBeforeAfterAdvice
 
 ```
-package com.morris.spring.aop;
+package com.morris.spring.aop.agent;
 
 import java.lang.reflect.Method;
 
@@ -70,8 +83,6 @@ public class UserServiceBeforeAfterAdvice implements MethodBeforeAdvice, AfterRe
 	}
 
 }
-
-
 ```
 测试类
 
@@ -84,14 +95,14 @@ public class UserServiceBeforeAfterAdvice implements MethodBeforeAdvice, AfterRe
 		
 		IUserService userService = (IUserService) proxyFactory.getProxy();
 		
-		System.out.println(userService.login("morris"));
+		System.out.println(userService.hello("morris"));
 	}
 ```
 运行结果如下：
 
 ```
-before invoke method login args:[Ljava.lang.Object;@6debcae2
-after invoke method login returnValue:hello morris
+before invoke method hello args:[Ljava.lang.Object;@f6c48ac
+after invoke method hello returnValue:hello morris
 hello morris
 ```
 
@@ -99,7 +110,7 @@ hello morris
 
 环绕通知类UserServiceAroundAdvice
 ```
-package com.morris.spring.aop;
+package com.morris.spring.aop.agent;
 
 import java.lang.reflect.Method;
 
@@ -108,24 +119,23 @@ import org.aopalliance.intercept.MethodInvocation;
 
 public class UserServiceAroundAdvice implements MethodInterceptor{
 
-	@Override
-	public Object invoke(MethodInvocation invocation) throws Throwable {
-		before(invocation.getMethod(), invocation.getArguments(), invocation.getThis());
-		Object returnValue = invocation.proceed();
-		afterReturning(returnValue, invocation.getMethod(), invocation.getArguments(), invocation.getThis());
-		return returnValue;
-	}
-	
-	private void afterReturning(Object returnValue, Method method, Object[] args, Object target) throws Throwable {
-		System.out.println("after invoke method " + method.getName() + " returnValue:" + returnValue);
-	}
+    @Override
+    public Object invoke(MethodInvocation invocation) throws Throwable {
+        before(invocation.getMethod(), invocation.getArguments(), invocation.getThis());
+        Object returnValue = invocation.proceed();
+        afterReturning(returnValue, invocation.getMethod(), invocation.getArguments(), invocation.getThis());
+        return returnValue;
+    }
 
-	private void before(Method method, Object[] args, Object target) throws Throwable {
-		System.out.println("before invoke method " + method.getName() + " args:" + args);
-	}
+    private void afterReturning(Object returnValue, Method method, Object[] args, Object target) throws Throwable {
+        System.out.println("after invoke method " + method.getName() + " returnValue:" + returnValue);
+    }
+
+    private void before(Method method, Object[] args, Object target) throws Throwable {
+        System.out.println("before invoke method " + method.getName() + " args:" + args);
+    }
 
 }
-
 ```
 测试类：
 
@@ -134,49 +144,35 @@ public class UserServiceAroundAdvice implements MethodInterceptor{
 	public void testAroundAdvice() {
 		ProxyFactory proxyFactory = new ProxyFactory();
 		proxyFactory.setTarget(new UserServiceImpl());
-		proxyFactory.addAdvice(new UserServiceAroundAdvice());
+		proxyFactory.addAdvice(new GreetingAroundAdvice());
 		
 		IUserService userService = (IUserService) proxyFactory.getProxy();
 		
-		System.out.println(userService.login("morris"));
+		System.out.println(userService.hello("morris"));
 	}
 
 ```
-运行结果如下：
 
-```
-before invoke method login args:[Ljava.lang.Object;@4cdbe50f
-after invoke method login returnValue:hello morris
-hello morris
+## 声明式通知
+通过Spring配置文件配置上面的bean。
 
-```
-
-### 声明式通知
-通过Spring配置文件配置bean。
-
-配置文件 spring-aop-around.xml
+spring-aop-around.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
             http://www.springframework.org/schema/beans 
-            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-            http://www.springframework.org/schema/aop 
-            http://www.springframework.org/schema/beans/spring-aop-4.3.xsd
-            http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
 	<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="interfaces" value="com.morris.spring.aop.IUserService"></property>
+		<property name="interfaces" value="com.morris.spring.aop.agent.IUserService"></property>
 		<property name="interceptorNames" value="userServiceAroundAdvice"></property>
 		<property name="targetName" value="userServiceImpl"></property>
 	</bean>
 	
-	<bean id="userServiceAroundAdvice" class="com.morris.spring.aop.UserServiceAroundAdvice"></bean>  
-	<bean id="userServiceImpl" class="com.morris.spring.aop.UserServiceImpl"></bean>  
+	<bean id="userServiceAroundAdvice" class="com.morris.spring.aop.agent.UserServiceAroundAdvice"></bean>
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl"></bean>
      
 </beans>
 ```
@@ -185,54 +181,222 @@ hello morris
 ```
 	@Test
 	public void testConfigAround() {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-aop-around.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-aop-around.xml");
+		IUserService userService = (IUserService) context.getBean("proxyFactoryBean"); // 直接取出代理对象
+		System.out.println(userService.hello("morris"));
+		context.close();
+	}	
+```
+
+## 使用基于正则表达式的SpringAOP切面类
+上面的写法会拦截IUserService中所有的方法，使用正则表达式来定义切点。
+
+为IUserService增加两个方法如下：
+IUserService.java
+```
+package com.morris.spring.aop.agent;
+
+public interface IUserService {
+	String hello(String name);
+
+	String hi(String name);
+
+	String bye(String name);
+}
+```
+UserServiceImpl.java
+```
+package com.morris.spring.aop.agent;
+
+public class UserServiceImpl implements IUserService {
+
+    @Override
+    public String hello(String name) {
+        return "hello " + name;
+    }
+
+    @Override
+    public String hi(String name) {
+        return "hi " + name;
+    }
+
+    @Override
+    public String bye(String name) {
+        return "bye " + name;
+    }
+
+}
+```
+spring-aop-regex.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl" /> <!-- 目标对象 -->
+		
+	<bean id="userServiceAroundAdvice" class="com.morris.spring.aop.agent.UserServiceAroundAdvice"></bean>  <!-- 通知 -->
+
+	<bean id="regexpMethodPointcutAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"> <!-- 切面 -->
+		<property name="patterns" value="com.morris.spring.aop.agent.UserServiceImpl.h.*"></property> <!-- 切点 -->
+		<property name="advice" ref="userServiceAroundAdvice"></property>
+	</bean>
+	
+	<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean"> <!-- 代理对象 -->
+		<property name="interfaces" value="com.morris.spring.aop.agent.IUserService"></property>
+		<property name="interceptorNames" value="regexpMethodPointcutAdvisor"></property>
+		<property name="targetName" value="userServiceImpl"></property>
+	</bean>
+</beans>
+```
+在上面的InterceptorNames属性不再是原来的增强，而是一个定义好的切面regexpMethodPointcutAdvisor，切面里面还用正则表达式定义了一个切点，即拦截userServiceImpl类中以h开头的方法。
+
+测试代码如下：
+```
+	@Test
+	public void testRegex() {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-aop-regex.xml");
+
 		IUserService userService = (IUserService) context.getBean("proxyFactoryBean");
-		System.out.println(userService.login("morris"));
+
+		userService.hello("morris");
+		userService.hi("jack");
+		userService.bye("lisa");
+
 		context.close();
 	}
 ```
-运行结果如下：
 
+改造上面的类，使用aop自动代理，不再需要手动配置代理对象。配置文件如下：
+
+spring-aop-regex-auto.xml
 ```
-before invoke method login args:[Ljava.lang.Object;@396e2f39
-after invoke method login returnValue:hello morris
-hello morris
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl" /> <!-- 目标对象 -->
+
+	<bean id="userServiceAroundAdvice" class="com.morris.spring.aop.agent.UserServiceAroundAdvice"></bean>  <!-- 通知 -->
+
+	<bean id="regexpMethodPointcutAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"> <!-- 切面 -->
+		<property name="patterns" value="com.morris.spring.aop.agent.UserServiceImpl.h.*"></property> <!-- 切点 -->
+		<property name="advice" ref="userServiceAroundAdvice"></property>
+	</bean>
+
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<property name="optimize" value="true"></property>
+	</bean>
+</beans>
 ```
 
-引入通知：上面的增强仅仅是对方法增强，也就是织入，对类的增强才能叫做引入增强，比如说不让UserServiceImpl去直接实现IUserService接口，靠Spring引入增强来动态实现。
+## 基于 AOP 的 @AspectJ
+为UserServiceImpl添加注解@Component。
 
+编写切面AroundAspect.java
 ```
-package com.morris.spring.aop.intro;
+package com.morris.spring.aop.agent;
 
-public interface IGreeting {
-	void sayHello(String name);
-}
-```
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
 
-```
-package com.morris.spring.aop.intro;
-
-public class GreetingImpl implements IGreeting{
-
-	@Override
-	public void sayHello(String name) {
-		System.out.println("hello " + name);
+@Aspect
+@Component
+public class AroundAspect {
+	
+	@Pointcut("execution(* com.morris.spring.aop.agent.UserServiceImpl.h*(..))")
+	public void aroundAll() {} 
+	
+	@Before("aroundAll()")
+	private void afterReturning() {
+		System.out.println("after invoke method around returnValue");
 	}
 
+	@After("aroundAll()")
+	private void before() {
+		System.out.println("before invoke around args");
+	}
 }
 ```
-增强的接口
+spring-aop-aspect.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop 
+            http://www.springframework.org/schema/aop/spring-aop.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.morris.spring.aop.agent"></context:component-scan>
+	
+	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+
+     
+</beans>
+```
+
+测试代码：
 
 ```
-package com.morris.spring.aop.intro;
+	@Test
+	public void testAspect() {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-aop-aspect.xml");
 
-public interface IApoloy {
-	void saySorry(String name);
-}
+		IUserService userService = (IUserService) context.getBean("userServiceImpl");
+
+		userService.hello("morris");
+		userService.hi("jack");
+		userService.bye("li0");
+
+		context.close();
+	}
+```
+
+将AroundAspect改写为xml形式。
 
 ```
-引入增强的类
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop 
+            http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl"/>
+
+	<bean id="aroundAspect" class="com.morris.spring.aop.agent.AroundAspect" />
+
+	<aop:config>
+		<aop:aspect ref="aroundAspect" >
+			<aop:before method="before" pointcut="execution(* com.morris.spring.aop.agent.UserServiceImpl.h*(..))"/>
+			<aop:after-returning method="afterReturning" pointcut="execution(* com.morris.spring.aop.agent.UserServiceImpl.h*(..))"/>
+		</aop:aspect>
+	</aop:config>
+</beans>
+```
+
+## 引入通知
+引入是对类的增强，是为需要方法的类添加属性和方法。可以用一个已存在的类让他实现另外的接口。
+
+GreetingIntroAdvice.java
 ```
 package com.morris.spring.aop.intro;
 
@@ -249,339 +413,42 @@ public class GreetingIntroAdvice extends DelegatingIntroductionInterceptor
 	}
 
 }
-
-
 ```
-配置文件 spring-aop-introduction.xml
-
+spring-aop-introduction.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
             http://www.springframework.org/schema/beans 
-            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-            http://www.springframework.org/schema/aop 
-            http://www.springframework.org/schema/beans/spring-aop-4.3.xsd
-            http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
-	<bean id="greetingIntroAdvice"
-		class="com.morris.spring.aop.intro.GreetingIntroAdvice">
-	</bean>
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl"/>
 
-	<bean id="greetingImpl"
-		class="com.morris.spring.aop.intro.GreetingImpl">
-	</bean>
+	<bean id="userServiceIntroAdvice" class="com.morris.spring.aop.agent.UserServiceIntroAdvice"/>
 
-	<bean id="springProxy"
-		class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="interfaces"
-			value="com.morris.spring.aop.intro.IApoloy" />
-		<property name="target" ref="greetingImpl" />
-		<property name="interceptorNames" value="greetingIntroAdvice"></property>
+	<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="interfaces" value="com.morris.spring.aop.agent.ISayService"></property>
+		<property name="interceptorNames" value="userServiceIntroAdvice"></property>
+		<property name="targetName" value="userServiceImpl"></property>
 		<property name="proxyTargetClass" value="true"></property>
 	</bean>
 
 </beans>
-
 ```
-场景类：
+proxyTargetClass默认为false，设置为true用CGLIB代理，否则后面无法将ISayService转为IUserService。
 
+测试代码：
 ```
-package com.morris.spring.aop.intro;
-
-import org.junit.Test;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-public class Client {
-	
-	@Test
+    @Test
 	public void testIntroductionAdvice(){
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-aop-introduction.xml");
+		ISayService sayService = (ISayService) context.getBean("proxyFactoryBean");
+		sayService.say("morris");
 		
-		IGreeting greeting = (IGreeting) context.getBean("springProxy");
-	
-		greeting.sayHello("morris");
-	
-		IApoloy apoloyProxy = (IApoloy)greeting;	
-		
-		apoloyProxy.saySorry("morris");	
-		
+		IUserService userService = (IUserService) sayService;
+		userService.hello("morris");
 		context.close();
-		
+
 	}
-
-
-}
-
-```
-proxyTargetClass属性表示是否代理目标类，默认是false，也就是代理接口，上面一个例子的配置就是没有这一项属性所以用JDK动态代理，现在是true即使用CGLib动态代理。
-
-### 使用基于正则表达式的SpringAOP切面类
-
-```
-package com.morris.spring.aop.regex;
-
-public interface IGreeting {
-	void sayHello(String name);
-	void saySorry(String name);
-	void bye(String name);
-}
-
-```
-
-```
-package com.morris.spring.aop.regex;
-
-public class GreetingImpl implements IGreeting{
-
-	@Override
-	public void sayHello(String name) {
-		System.out.println("hello " + name);
-	}
-
-	@Override
-	public void saySorry(String name) {	
-		System.out.println("sorry " + name);
-	}
-
-	@Override
-	public void bye(String name) {
-		System.out.println("bye " + name);
-	}
-
-}
-
-```
-
-```
-package com.morris.spring.aop.regex;
-
-import java.lang.reflect.Method;
-
-import org.aopalliance.intercept.MethodInterceptor;
-import org.aopalliance.intercept.MethodInvocation;
-
-public class GreetingAroundAdvice implements MethodInterceptor{
-
-	@Override
-	public Object invoke(MethodInvocation invocation) throws Throwable {
-		before(invocation.getMethod(), invocation.getArguments(), invocation.getThis());
-		Object returnValue = invocation.proceed();
-		afterReturning(returnValue, invocation.getMethod(), invocation.getArguments(), invocation.getThis());
-		return returnValue;
-	}
-	
-	private void afterReturning(Object returnValue, Method method, Object[] args, Object target) throws Throwable {
-		System.out.println("after invoke method " + method.getName() + " returnValue:" + returnValue);
-	}
-
-	private void before(Method method, Object[] args, Object target) throws Throwable {
-		System.out.println("before invoke method " + method.getName() + " args:" + args);
-	}
-
-}
-
-```
-
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-    xmlns:context="http://www.springframework.org/schema/context"
-    xsi:schemaLocation="
-            http://www.springframework.org/schema/beans 
-            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-            http://www.springframework.org/schema/aop 
-            http://www.springframework.org/schema/beans/spring-aop-4.3.xsd
-            http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-
-		
-	<bean id="greetingAroundAdvice" class="com.morris.spring.aop.regex.GreetingAroundAdvice"></bean>  
-	<bean id="greetingImpl" class="com.morris.spring.aop.regex.GreetingImpl"></bean>  
-	
-	<bean id="regexpMethodPointcutAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
-		<property name="patterns" value="com.morris.spring.aop.regex.GreetingImpl.say.*"></property>
-		<property name="advice" ref="greetingAroundAdvice"></property>
-	</bean>
-	
-	<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="interfaces" value="com.morris.spring.aop.regex.IGreeting"></property>
-		<property name="interceptorNames" value="regexpMethodPointcutAdvisor"></property>
-		<property name="targetName" value="greetingImpl"></property>
-	</bean>
-
-     
-</beans>
-```
-
-
-```
-package com.morris.spring.aop.regex;
-
-import org.junit.Test;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-public class Client {
-	
-	@Test
-	public void testRegex() {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-aop-regex.xml");
-		
-		IGreeting greeting = (IGreeting) context.getBean("proxyFactoryBean");
-		
-		greeting.sayHello("morris");
-		greeting.saySorry("jack");
-		greeting.bye("lisa");
-		
-		context.close();
-	}
-
-}
-
-```
-在上面的InterceptorNames属性不再是原来的增强，而是一个定义好的切面regexpMethodPointcutAdvisor，切面里面还用正则表达式定义了一个切点，即拦截GreetingImpl类中以say开头的方法。
-
-改造上面的类，使用aop自动代理。
-为GreetingImpl和GreetingAroundAdvice加上注解@Component，配置文件如下：
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-    xmlns:context="http://www.springframework.org/schema/context"
-    xsi:schemaLocation="
-            http://www.springframework.org/schema/beans 
-            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-            http://www.springframework.org/schema/aop 
-            http://www.springframework.org/schema/beans/spring-aop-4.3.xsd
-            http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-
-	<context:component-scan base-package="com.morris.spring.aop.regex"></context:component-scan>
-	
-	<bean id="regexpMethodPointcutAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
-		<property name="patterns" value="com.morris.spring.aop.regex.GreetingImpl.say.*"></property>
-		<property name="advice" ref="greetingAroundAdvice"></property>
-	</bean>
-	
-	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
-		<property name="optimize" value="true"></property>
-	</bean>
-
-     
-</beans>
-```
-
-### 基于 AOP 的 @AspectJ
-
-```
-package com.morris.spring.aop.regex;
-
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.springframework.stereotype.Component;
-
-@Aspect
-@Component
-public class AroundAspect {
-	
-	@Around("execution(* com.morris.spring.aop.regex.IGreeting.*(..))")
-	public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
-		before(joinPoint.getArgs(), joinPoint.getTarget());
-		Object returnValue = joinPoint.proceed();
-		afterReturning(returnValue);
-		return returnValue;
-	}
-	
-	private void afterReturning(Object returnValue) throws Throwable {
-		System.out.println("after invoke method around returnValue:" + returnValue);
-	}
-
-	private void before(Object[] args, Object target) throws Throwable {
-		System.out.println("before invoke around args:" + args);
-	}
-
-}
-
-```
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-    xmlns:context="http://www.springframework.org/schema/context"
-    xsi:schemaLocation="
-            http://www.springframework.org/schema/beans 
-            http://www.springframework.org/schema/beans/spring-beans.xsd
-            http://www.springframework.org/schema/aop 
-            http://www.springframework.org/schema/aop/spring-aop.xsd
-            http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context.xsd">
-
-	<context:component-scan base-package="com.morris.spring.aop.regex"></context:component-scan>
-	
-	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
-
-     
-</beans>
-```
-测试代码：
-
-```
-	@Test
-	public void testAspect() {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-aop-aspect.xml");
-		
-		IGreeting greeting = (IGreeting) context.getBean("greetingImpl");
-		
-		greeting.sayHello("morris");
-		greeting.saySorry("jack");
-		greeting.bye("li0");
-		
-		context.close();
-	}
-```
-
-继续简化：
-
-```
-package com.morris.spring.aop.regex;
-
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
-
-@Aspect
-@Component
-public class AroundAspect2 {
-	
-	@Pointcut("execution(* com.morris.spring.aop.regex.GreetingImpl.*(..))")
-	public void aroundAll() {} 
-	
-	@Before("aroundAll()")
-	private void afterReturning() {
-		System.out.println("after invoke method around returnValue");
-	}
-
-	@After("aroundAll()")
-	private void before() {
-		System.out.println("before invoke around args");
-	}
-
-}
-
 ```
