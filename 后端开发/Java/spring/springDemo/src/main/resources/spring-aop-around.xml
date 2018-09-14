@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
             http://www.springframework.org/schema/beans 
-            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-            http://www.springframework.org/schema/aop 
-            http://www.springframework.org/schema/beans/spring-aop-4.3.xsd
-            http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
 	<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="interfaces" value="com.morris.spring.aop.IUserService"></property>
+		<property name="interfaces" value="com.morris.spring.aop.agent.IUserService"></property>
 		<property name="interceptorNames" value="userServiceAroundAdvice"></property>
 		<property name="targetName" value="userServiceImpl"></property>
 	</bean>
 	
-	<bean id="userServiceAroundAdvice" class="com.morris.spring.aop.UserServiceAroundAdvice"></bean>  
-	<bean id="userServiceImpl" class="com.morris.spring.aop.UserServiceImpl"></bean>  
+	<bean id="userServiceAroundAdvice" class="com.morris.spring.aop.agent.UserServiceAroundAdvice"></bean>
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl"></bean>
      
 </beans>

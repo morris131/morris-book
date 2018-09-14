@@ -4,15 +4,9 @@
     xsi:schemaLocation="
             http://www.springframework.org/schema/beans 
             http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
-	<bean id="a" class="com.morris.spring.cycle.A">
-		<constructor-arg index="0" ref="b"/>
-	</bean>
-	
-	<bean id="b" class="com.morris.spring.cycle.B">
-		<constructor-arg index="0" ref="c"/>
-	</bean>
-	
-	<bean id="c" class="com.morris.spring.cycle.C">
-		<constructor-arg index="0" ref="a"/>
-	</bean>
+                    
+     <bean class="com.morris.spring.inject.UserConfig"/>
+
+     <import resource="spring-inject-setter.xml"/>
+
 </beans>

@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class BeanLifeCycleTest {
 	
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-lifecycle.xml");
 		
 		Person person = (Person) context.getBean("person");
 		

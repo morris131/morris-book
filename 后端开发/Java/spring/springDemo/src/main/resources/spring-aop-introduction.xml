@@ -1,32 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
             http://www.springframework.org/schema/beans 
-            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-            http://www.springframework.org/schema/aop 
-            http://www.springframework.org/schema/beans/spring-aop-4.3.xsd
-            http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
-	<bean id="greetingIntroAdvice"
-		class="com.morris.spring.aop.intro.GreetingIntroAdvice">
-	</bean>
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl"/>
 
-	<bean id="greetingImpl"
-		class="com.morris.spring.aop.intro.GreetingImpl">
-	</bean>
+	<bean id="userServiceIntroAdvice" class="com.morris.spring.aop.agent.UserServiceIntroAdvice"/>
 
-	<bean id="springProxy"
-		class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="interfaces"
-			value="com.morris.spring.aop.intro.IApoloy" />
-		<property name="target" ref="greetingImpl" />
-		<property name="interceptorNames" value="greetingIntroAdvice"></property>
+	<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="interfaces" value="com.morris.spring.aop.agent.ISayService"></property>
+		<property name="interceptorNames" value="userServiceIntroAdvice"></property>
+		<property name="targetName" value="userServiceImpl"></property>
 		<property name="proxyTargetClass" value="true"></property>
 	</bean>
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+                    
+     <bean id="user" class="com.morris.spring.inject.User">
+         <constructor-arg index="0" value="morris"/>
+         <constructor-arg index="1" value="20"/>
+    </bean>
+
+    <bean id="user2" class="com.morris.spring.inject.User">
+        <constructor-arg name="name" value="morris"/>
+        <constructor-arg name="age" value="20"/>
+    </bean>
+
+    <bean id="user3" class="com.morris.spring.inject.User">
+        <constructor-arg type="java.lang.String" value="morris"/>
+        <constructor-arg type="java.lang.Integer" value="20"/>
+    </bean>
+</beans>

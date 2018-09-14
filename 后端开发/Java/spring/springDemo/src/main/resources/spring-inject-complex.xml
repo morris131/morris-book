@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+                    
+    <bean id="user" class="com.morris.spring.inject.User2">
+        <property name="names">
+            <array>
+                <value>张三</value>
+                <value>李四</value>
+                <value>王五</value>
+            </array>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>张三</value>
+                <value>李四</value>
+                <value>王五</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="one" value="1"/>
+                <entry key="two" value="2"/>
+                <entry key="three" value="3"/>
+            </map>
+        </property>
+
+        <property name="properties">
+           <props>
+               <prop key="username">morris</prop>
+               <prop key="password">000000</prop>
+           </props>
+        </property>
+    </bean>
+
+</beans>

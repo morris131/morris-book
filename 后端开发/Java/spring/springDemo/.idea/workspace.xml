@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/AOP.md" line="441" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5280f64-30a2-465b-acfb-d4997d85a585" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/AOP.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/AOP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Bean的生命周期.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Bean的生命周期.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/循环依赖的三种方式.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/循环依赖的三种方式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/无标题Markdown.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Bean的注入方式.md" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../mvc/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&gt;</find>
+      <find>requiredProperties</find>
+      <find>handlerMappings</find>
+      <find>webApplicationContext</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../morris-book.wiki" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Bean的生命周期.md" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-cycle-construct.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-lifecycle.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-cycle-setter.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/cycle/ConstructCycleTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/cycle/SetterSingletonCycleTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-cycle-setter-prototype.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/cycle/DisableSetterSingletonCycleTest.java" />
+        <option value="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/循环依赖的三种方式.md" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-inject-construct.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-inject-setter.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/inject/User2.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-inject-complex.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/inject/UserConfigTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/inject/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/inject/AutoInjectTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-inject-auto.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-inject-construct-c.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/inject/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-inject-setter-p.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/inject/SystemConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/inject/UserConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-inject-mix.xml" />
+        <option value="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Bean的注入方式.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/IUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/agent/UserServiceAroundAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-aop-around.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/agent/IUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-aop-regex.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-aop-regex-auto.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/agent/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/agent/AroundAspect2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/agent/AroundAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/intro/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-aop-aspect.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-aop-aspect2.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/agent/ISayService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/agent/UserServiceIntroAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-aop-introduction.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/morris/spring/aop/agent/Client.java" />
+        <option value="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/AOP.md" />
+        <option value="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/MVC工作原理.md" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../mvc/src/main/resources/spring.xml" />
+        <option value="$PROJECT_DIR$/../mvc/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/../mvc/src/main/resources/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/../mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring 启动流程及源码分析.md" />
+        <option value="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC启动流程及源码分析.md" />
+        <option value="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC HandlerMapping的初始化.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/development/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="D:\development\apache-maven-3.5.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="mvc Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="mvc Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="155" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morris-book" type="9c53a853:ProjectViewModuleGroupNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morris-book" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="morris-book.wiki" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morris-book" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="morris-book.wiki" type="462c0819:PsiDirectoryNode" />
+              <item name="后端开发" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morris-book" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="morris-book.wiki" type="462c0819:PsiDirectoryNode" />
+              <item name="后端开发" type="462c0819:PsiDirectoryNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="morris-book" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="morris-book.wiki" type="462c0819:PsiDirectoryNode" />
+              <item name="后端开发" type="462c0819:PsiDirectoryNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="sun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="sun" type="462c0819:PsiDirectoryNode" />
+              <item name="nio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="sun" type="462c0819:PsiDirectoryNode" />
+              <item name="nio" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="sun" type="462c0819:PsiDirectoryNode" />
+              <item name="nio" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="WindowsNativeDispatcher" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:javax.servlet-api:4.0.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:javax.servlet-api:4.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="javax.servlet-api-4.0.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:javax.servlet-api:4.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="javax.servlet-api-4.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:javax.servlet-api:4.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="javax.servlet-api-4.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="ServletContextListener" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-beans:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-beans:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-beans-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-beans:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-beans-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-beans:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-beans-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-beans:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-beans-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="BeanFactoryUtils" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-context:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-context-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+              <item name="EmbeddedValueResolverAware" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-test:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-test:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-test-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-test:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-test-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-test:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-test-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-test:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-test-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-test:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-test-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-test:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-test-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="TestDispatcherServlet" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+              <item name="ContextLoader" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+              <item name="ContextLoaderListener" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="cors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-web:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-web-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="springframework" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="cors" type="462c0819:PsiDirectoryNode" />
+              <item name="CorsUtils" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="AbstractHandlerMapping" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="AbstractHandlerMethodMapping" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="MatchableHandlerMapping" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+              <item name="RequestMappingHandlerMapping" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+              <item name="RequestMappingInfoHandlerMapping" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="DispatcherServlet" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="FrameworkServlet" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="HandlerAdapter" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="HandlerMapping" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="springDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-webmvc:5.0.8.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-webmvc-5.0.8.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="HttpServletBean" type="1a9f42e2:ClassTreeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="dis&#9;FILE&#9;jar://C:/Users/wj65651/.m2/repository/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java&#10;ServletInvocableHandlerMethod&#9;PSI&#9;JAVA://org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod&#10;dispatchservlet&#9;PSI&#9;JAVA://org.springframework.web.servlet.DispatcherServlet" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mvc" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.morris.spring.aop.agent" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitPrj\morris-book.wiki\后端开发\Java\spring" />
+      <recent name="D:\gitPrj\morris-book\后端开发\Java\spring\mvc\src\main\resources" />
+      <recent name="D:\gitPrj\morris-book\后端开发\Java\spring\springDemo\src\main\resources" />
+      <recent name="D:\gitPrj\morris-book.wiki\后端开发\Java\spring\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.run-mvc">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Client.testAspect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.morris.spring.aop.agent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.morris.spring.aop.agent" />
+      <option name="MAIN_CLASS_NAME" value="com.morris.spring.aop.agent.Client" />
+      <option name="METHOD_NAME" value="testAspect" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Client.testAspect2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.morris.spring.aop.agent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.morris.spring.aop.agent" />
+      <option name="MAIN_CLASS_NAME" value="com.morris.spring.aop.agent.Client" />
+      <option name="METHOD_NAME" value="testAspect2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Client.testIntroductionAdvice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.morris.spring.aop.agent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.morris.spring.aop.agent" />
+      <option name="MAIN_CLASS_NAME" value="com.morris.spring.aop.agent.Client" />
+      <option name="METHOD_NAME" value="testIntroductionAdvice" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Client.testRegex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.morris.spring.aop.agent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.morris.spring.aop.agent" />
+      <option name="MAIN_CLASS_NAME" value="com.morris.spring.aop.agent.Client" />
+      <option name="METHOD_NAME" value="testRegex" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Client.testRegexAuto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.morris.spring.aop.agent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.morris.spring.aop.agent" />
+      <option name="MAIN_CLASS_NAME" value="com.morris.spring.aop.agent.Client" />
+      <option name="METHOD_NAME" value="testRegexAuto" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="run-mvc" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="jetty:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../mvc" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Maven.run-mvc" />
+      <item itemvalue="JUnit.Client.testRegex" />
+      <item itemvalue="JUnit.Client.testRegexAuto" />
+      <item itemvalue="JUnit.Client.testAspect" />
+      <item itemvalue="JUnit.Client.testAspect2" />
+      <item itemvalue="JUnit.Client.testIntroductionAdvice" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Client.testIntroductionAdvice" />
+        <item itemvalue="JUnit.Client.testAspect2" />
+        <item itemvalue="JUnit.Client.testAspect" />
+        <item itemvalue="JUnit.Client.testRegexAuto" />
+        <item itemvalue="JUnit.Client.testRegex" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5280f64-30a2-465b-acfb-d4997d85a585" name="Default" comment="" />
+      <created>1536723252131</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536723252131</updated>
+      <workItem from="1536723253507" duration="43667000" />
+      <workItem from="1536908379863" duration="8770000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Client_testAspect - 2018.09.13 at 16h 34m 30s.xml">
+      <configuration name="Client.testAspect" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testAspect - 2018.09.13 at 16h 34m 37s.xml">
+      <configuration name="Client.testAspect" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testAspect2 - 2018.09.13 at 16h 47m 32s.xml">
+      <configuration name="Client.testAspect2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testIntroductionAdvice - 2018.09.13 at 16h 59m 03s.xml">
+      <configuration name="Client.testIntroductionAdvice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testIntroductionAdvice - 2018.09.13 at 17h 00m 23s.xml">
+      <configuration name="Client.testIntroductionAdvice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testIntroductionAdvice - 2018.09.13 at 17h 01m 11s.xml">
+      <configuration name="Client.testIntroductionAdvice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testIntroductionAdvice - 2018.09.13 at 17h 03m 54s.xml">
+      <configuration name="Client.testIntroductionAdvice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testIntroductionAdvice - 2018.09.13 at 17h 04m 14s.xml">
+      <configuration name="Client.testIntroductionAdvice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testIntroductionAdvice - 2018.09.13 at 17h 06m 39s.xml">
+      <configuration name="Client.testIntroductionAdvice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Client_testIntroductionAdvice - 2018.09.13 at 17h 07m 57s.xml">
+      <configuration name="Client.testIntroductionAdvice" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="52437000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info id="Image Layers" order="5" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3148148" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="Designer" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.25266525" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39978212" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.32897604" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32897604" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.32897604" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="Spring" order="1" />
+      <window_info id="Image Layers" order="5" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.3148148" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32897604" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="6" weight="0.32897604" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32897604" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class</url>
+          <line>218</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="49" column="49" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="49" />
+          <folding>
+            <element signature="e#1770#1771#0" expanded="true" />
+            <element signature="e#1829#1830#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.8.RELEASE/spring-beans-5.0.8.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="529" column="33" lean-forward="true" selection-start-line="529" selection-start-column="33" selection-end-line="529" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.8.RELEASE/spring-beans-5.0.8.RELEASE-sources.jar!/org/springframework/beans/factory/ListableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="241" column="29" selection-start-line="241" selection-start-column="29" selection-end-line="241" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.8.RELEASE/spring-core-5.0.8.RELEASE-sources.jar!/org/springframework/core/annotation/AnnotationAwareOrderComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="124" column="26" lean-forward="true" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE-sources.jar!/org/springframework/context/ApplicationContextAware.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE.jar!/org/springframework/web/servlet/HttpServletBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="97" column="26" lean-forward="true" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE.jar!/org/springframework/web/context/support/WebApplicationContextUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE-sources.jar!/org/springframework/context/ConfigurableApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="159" column="9" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.8.RELEASE/spring-beans-5.0.8.RELEASE-sources.jar!/org/springframework/beans/BeanUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1239">
+          <caret line="273" column="43" selection-start-line="273" selection-start-column="43" selection-end-line="273" selection-end-column="43" />
+          <folding>
+            <element signature="e#5081#5082#0" expanded="true" />
+            <element signature="e#5125#5126#0" expanded="true" />
+            <element signature="e#5272#5273#0" expanded="true" />
+            <element signature="e#5312#5313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SpringMvcDemo/web/WEB-INF/applicationContext.xml" />
+    <entry file="file://$PROJECT_DIR$/../SpringMvcDemo/web/WEB-INF/dispatcher-servlet.xml" />
+    <entry file="file://$PROJECT_DIR$/../SpringMvcDemo/web/WEB-INF/web.xml" />
+    <entry file="file://$PROJECT_DIR$/.classpath" />
+    <entry file="file://$PROJECT_DIR$/.project" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/morris/spring/inject/SystemConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/morris/spring/cycle/DisableSetterSingletonCycleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/morris/spring/cycle/SettlePrototypeCycleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/extensions/com.intellij.database/schema/Generate POJOs.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="19" selection-start-line="19" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mvc/src/main/resources/spring-aop-aspect2.xml" />
+    <entry file="file://$PROJECT_DIR$/../mvc/src/main/resources/spring-aop-aspect.xml" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE.jar!/META-INF/spring.schemas">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mvc/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mvc/src/main/resources/spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mvc/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/nio/fs/WindowsNativeDispatcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="484" column="80" selection-start-line="484" selection-start-column="80" selection-end-line="484" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mvc/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="100" column="57" selection-start-line="100" selection-start-column="57" selection-end-line="100" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1-sources.jar!/javax/servlet/ServletContextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="40" selection-start-line="40" selection-end-line="73" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/context/ContextLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="378" selection-start-line="378" selection-end-line="409" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mvc/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/HttpServletBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="147" selection-start-line="147" selection-end-line="176" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/context/ContextLoaderListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="102" column="21" lean-forward="true" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.8.RELEASE/spring-beans-5.0.8.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactoryUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="283" column="37" selection-start-line="283" selection-start-column="37" selection-end-line="283" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/handler/MatchableHandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE-sources.jar!/org/springframework/context/EmbeddedValueResolverAware.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/循环依赖的三种方式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC工作原理.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="15" selection-start-line="15" selection-end-line="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC启动流程及源码分析.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="358">
+            <caret line="338" column="9" lean-forward="true" selection-start-line="338" selection-start-column="9" selection-end-line="338" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/FrameworkServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="670" column="14" selection-start-line="670" selection-start-column="14" selection-end-line="670" selection-end-column="14" />
+          <folding>
+            <element signature="e#15884#15885#0" expanded="true" />
+            <element signature="e#15924#15925#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC HandlerMapping的初始化.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="776">
+            <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/HandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="131" column="26" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE-sources.jar!/org/springframework/web/cors/CorsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/HandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.0.8.RELEASE/spring-test-5.0.8.RELEASE-sources.jar!/org/springframework/test/web/servlet/TestDispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="1180" column="46" selection-start-line="1180" selection-start-column="36" selection-end-line="1180" selection-end-column="46" />
+          <folding>
+            <element signature="e#23900#23901#0" expanded="true" />
+            <element signature="e#23930#23931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="55" column="72" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/RequestMappingInfoHandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="56" column="77" lean-forward="true" selection-start-line="56" selection-start-column="77" selection-end-line="56" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/handler/AbstractHandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="349" column="43" selection-start-line="349" selection-start-column="25" selection-end-line="349" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/handler/AbstractHandlerMethodMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="341" column="28" selection-start-line="341" selection-start-column="28" selection-end-line="341" selection-end-column="28" />
+          <folding>
+            <element signature="e#6823#6824#0" expanded="true" />
+            <element signature="e#6850#6851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="D:\gitPrj\morris-book\后端开发\Java\spring\mvc" />
+    <option value="jetty:run" />
+  </component>
+</project>

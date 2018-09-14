@@ -2,10 +2,10 @@ package com.morris.spring.cycle;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ConstructCycleTest {
+public class SetterSingletonCycleTest {
 	
 	public static void main(String[] args) {
-		new ClassPathXmlApplicationContext("spring-cycle-construct.xml");
+		new ClassPathXmlApplicationContext("spring-cycle-setter-singleton.xml");
 	}
 
 }
