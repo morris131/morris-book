@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+                    
+     <bean id="person" destroy-method="myDestroy" init-method="init" class="com.morris.spring.bean.Person">
+        <property name="name">
+            <value>jack</value>
+        </property>
+    </bean>
+    
+    <!-- 配置自定义的后置处理器 -->
+     <bean id="postProcessor" class="com.morris.spring.bean.MyBeanPostProcessor" />
+</beans>

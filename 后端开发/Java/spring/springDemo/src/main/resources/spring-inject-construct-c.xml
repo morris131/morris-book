@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+                    
+     <bean id="user" class="com.morris.spring.inject.User" c:_0="morris" c:_1="20"/>
+
+    <bean id="user2" class="com.morris.spring.inject.User" c:name="morris" c:age="20"/>
+</beans>

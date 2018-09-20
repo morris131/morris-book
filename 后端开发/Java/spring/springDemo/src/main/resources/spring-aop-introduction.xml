@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl"/>
+
+	<bean id="userServiceIntroAdvice" class="com.morris.spring.aop.agent.UserServiceIntroAdvice"/>
+
+	<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="interfaces" value="com.morris.spring.aop.agent.ISayService"></property>
+		<property name="interceptorNames" value="userServiceIntroAdvice"></property>
+		<property name="targetName" value="userServiceImpl"></property>
+		<property name="proxyTargetClass" value="true"></property>
+	</bean>
+
+</beans>

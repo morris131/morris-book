@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="userServiceImpl" class="com.morris.spring.aop.agent.UserServiceImpl" /> <!-- 目标对象 -->
+
+	<bean id="userServiceAroundAdvice" class="com.morris.spring.aop.agent.UserServiceAroundAdvice"></bean>  <!-- 通知 -->
+
+	<bean id="regexpMethodPointcutAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"> <!-- 切面 -->
+		<property name="patterns" value="com.morris.spring.aop.agent.UserServiceImpl.h.*"></property> <!-- 切点 -->
+		<property name="advice" ref="userServiceAroundAdvice"></property>
+	</bean>
+
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<property name="optimize" value="true"></property>
+	</bean>
+</beans>
