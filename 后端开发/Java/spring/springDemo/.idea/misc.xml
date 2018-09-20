@@ -8,6 +8,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/../../设计模式/pattern/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/../../设计模式/pattern/pom.xml" />
       </list>
     </option>
   </component>

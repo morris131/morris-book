@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../设计模式/pattern/target/maven-archiver/maven-archiver.iml" filepath="$PROJECT_DIR$/../../设计模式/pattern/target/maven-archiver/maven-archiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../../../morris-book.wiki/morris-book.wiki.iml" filepath="$PROJECT_DIR$/../../../../../morris-book.wiki/morris-book.wiki.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mvc/mvc.iml" filepath="$PROJECT_DIR$/../mvc/mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../设计模式/pattern/pattern.iml" filepath="$PROJECT_DIR$/../../设计模式/pattern/pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/springDemo.iml" filepath="$PROJECT_DIR$/springDemo.iml" />
     </modules>
   </component>

@@ -1,25 +1,20 @@
 package com.morris.pattern.singleton;
 
 /**
- * 
- * 懒汉式线程不安全单例类
- * 
- * @author morris
- *
+ * 懒汉式单例类,线程不安全
  */
 public class LazySingleton {
 
-	private static LazySingleton singleton;
+    private static LazySingleton singleton;
 
-	private LazySingleton() {
+    private LazySingleton() {
+    }
 
-	}
+    public static LazySingleton getInstance() {
+        if (null == singleton) {
+            singleton = new LazySingleton();
+        }
+        return singleton;
+    }
 
-	public static LazySingleton getInstance() {
-
-		if (null == singleton) {
-			singleton = new LazySingleton();
-		}
-		return singleton;
-	}
 }
