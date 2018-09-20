@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-Welcome to the morris-book wiki!
-=======
 # 目录
 
 * 移动开发
@@ -23,4 +20,3 @@ Welcome to the morris-book wiki!
   * [LVS](架构设计/LVS)
   * [Nginx](架构设计/Nginx)
   * [设计模式](架构设计/设计模式)
->>>>>>> 3c9f02c1ed2d51c9e6f3721d0acc4222b234af00
