@@ -1,21 +1,17 @@
 package com.morris.pattern.singleton;
 
-/**
- * 双重同步锁
- */
 public class DoubleCheckLockSingleton {
 
-	private volatile static DoubleCheckLockSingleton singleton;
+	private static DoubleCheckLockSingleton singleton;
 
 	private DoubleCheckLockSingleton() {
 	}
 
 	public static DoubleCheckLockSingleton getSingleton() {
-
-		if (singleton == null) {
-			synchronized (DoubleCheckLockSingleton.class) {
-				if (singleton == null) {
-					singleton = new DoubleCheckLockSingleton();
+		if (singleton == null) { // #1
+			synchronized (DoubleCheckLockSingleton.class) { // #2
+				if (singleton == null) { // #3
+					singleton = new DoubleCheckLockSingleton(); // #4
 				}
 			}
 		}

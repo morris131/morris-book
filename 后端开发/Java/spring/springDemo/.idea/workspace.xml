@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5280f64-30a2-465b-acfb-d4997d85a585" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之代理模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之代理模式.md" afterDir="false" />
-    </list>
+    <list default="true" id="c5280f64-30a2-465b-acfb-d4997d85a585" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/../mvc/target/" />
     <ignored path="$PROJECT_DIR$/../../设计模式/pattern/target/" />
@@ -15,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -276,15 +274,15 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="hashm&#9;PSI&#9;JAVA://java.util.HashMap&#10;dis&#9;FILE&#9;jar://C:/Users/wj65651/.m2/repository/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java&#10;ServletInvocableHandlerMethod&#9;PSI&#9;JAVA://org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod&#10;dispatchservlet&#9;PSI&#9;JAVA://org.springframework.web.servlet.DispatcherServlet" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../设计模式/pattern" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -526,6 +524,7 @@
       <workItem from="1536908379863" duration="9045000" />
       <workItem from="1537155408308" duration="1251000" />
       <workItem from="1537263328342" duration="12870000" />
+      <workItem from="1537412077311" duration="78000" />
     </task>
     <servers />
   </component>
@@ -562,7 +561,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66833000" />
+    <option name="totallyTimeSpent" value="66911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -582,7 +581,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.25799572" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.26066098" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -701,16 +700,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC工作原理.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="15" selection-start-line="15" selection-end-line="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC工作原理.md" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.8.RELEASE/spring-webmvc-5.0.8.RELEASE-sources.jar!/org/springframework/web/servlet/FrameworkServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="707">
@@ -788,101 +778,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/IOC.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/单一职责原则.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="14" selection-start-line="2" selection-end-line="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式的概念.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="361">
-            <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/里氏替换原则.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-535" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/依赖倒置原则.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="456">
-            <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/Java查看动态代理生成的代码.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1019" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/.classpath">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/src/main/java/com/morris/pattern/singleton/StaticBlockHungerSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC启动流程及源码分析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="358">
-            <caret line="338" column="9" selection-start-line="338" selection-start-column="9" selection-end-line="338" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC HandlerMapping的初始化.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="526">
-            <caret line="107" selection-start-line="107" selection-end-line="107" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/IOC.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/单一职责原则.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式的概念.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/README.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/里氏替换原则.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/依赖倒置原则.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/Java查看动态代理生成的代码.md" />
+    <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/.classpath" />
+    <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/.project" />
+    <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/src/main/java/com/morris/pattern/singleton/StaticBlockHungerSingleton.java" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC启动流程及源码分析.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Spring MVC HandlerMapping的初始化.md" />
     <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/src/main/java/com/morris/pattern/singleton/SyncMethodLazySingleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -890,24 +797,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/循环依赖的三种方式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Bean的生命周期.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="133">
-            <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/循环依赖的三种方式.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/spring/Bean的生命周期.md" />
     <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/src/main/java/com/morris/pattern/singleton/HungerSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -957,13 +848,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/src/main/java/com/morris/pattern/proxy/CustomAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/src/main/java/com/morris/pattern/proxy/CustomAgent.java" />
     <entry file="file://$PROJECT_DIR$/../../设计模式/pattern/src/main/java/com/morris/pattern/proxy/IUserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -999,46 +884,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之代理模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-228">
-            <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之六大设计原则.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor>
-            <caret selection-end-line="5" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之单例模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="113">
-            <caret line="164" selection-start-line="164" selection-end-line="174" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之工厂方法模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="323">
-            <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之代理模式.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之六大设计原则.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之单例模式.md" />
+    <entry file="file://$PROJECT_DIR$/../../../../../morris-book.wiki/后端开发/Java/设计模式/设计模式之工厂方法模式.md" />
   </component>
   <component name="masterDetails">
     <states>

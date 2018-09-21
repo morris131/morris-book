@@ -1,8 +1,5 @@
 package com.morris.pattern.singleton;
 
-/**
- * 饿汉式单例，类加载时初始化单例对象
- */
 public class HungerSingleton {
 
     private static HungerSingleton singleton = new HungerSingleton();
