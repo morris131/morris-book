@@ -1,0 +1,63 @@
+@startuml
+
+title 皮肤库工厂方法模式设计类图
+
+interface Button
+
+interface TextField
+
+interface ComboBox
+
+class SpringButton
+class SummerButton
+
+SpringButton ..|> Button
+SummerButton ..|> Button
+
+class SpringTextField
+class SummerTextField
+
+SpringTextField ..|> TextField
+SummerTextField ..|> TextField
+
+class SpringComboBox
+class SummerComboBox
+
+SpringComboBox ..|> ComboBox
+SummerComboBox ..|> ComboBox
+
+interface ButtonFactory
+interface TextFieldFactory
+interface ComboBoxFactory
+
+class SpringButtonFactory
+class SummerButtonFactory
+class SpringTextFieldFactory
+class SummerTextFieldFactory
+class SpringComboBoxFactory
+class SummerComboBoxFactory
+
+SpringButtonFactory ..|> ButtonFactory
+SummerButtonFactory ..|> ButtonFactory
+SpringTextFieldFactory ..|> TextFieldFactory
+SummerTextFieldFactory ..|> TextFieldFactory
+SpringComboBoxFactory ..|> ComboBoxFactory
+SummerComboBoxFactory ..|> ComboBoxFactory
+
+SpringButtonFactory ..> SpringButton
+SummerButtonFactory ..> SummerButton
+SpringTextFieldFactory ..|> SpringTextField
+SummerTextFieldFactory ..|> SummerTextField
+SpringComboBoxFactory ..|> SpringComboBox
+SummerComboBoxFactory ..|> SummerComboBox
+
+class Client
+
+Client ..> Button
+Client ..> TextField
+Client ..> ComboBox
+Client ..> ButtonFactory
+Client ..> TextFieldFactory
+Client ..> ComboBoxFactory
+
+@enduml

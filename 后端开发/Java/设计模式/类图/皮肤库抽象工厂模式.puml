@@ -1,0 +1,84 @@
+@startuml
+
+title 皮肤库工厂方法模式设计类图
+
+interface Button
+interface TextField
+interface ComboBox
+
+class SpringButton
+class SummerButton
+
+SpringButton ..|> Button
+SummerButton ..|> Button
+
+class SpringTextField
+class SummerTextField
+
+SpringTextField ..|> TextField
+SummerTextField ..|> TextField
+
+class SpringComboBox
+class SummerComboBox
+
+SpringComboBox ..|> ComboBox
+SummerComboBox ..|> ComboBox
+
+interface SkinFactory {
+    Button createButton();
+    TextField createTextField();
+    ComboBox createComboBox();
+}
+
+class SpringSkinFactory {
+    Button createButton();
+    TextField createTextField();
+    ComboBox createComboBox();
+}
+
+note top of SpringSkinFactory
+    public Button createButton() {
+        return new SpringButton();
+    }
+    public TextField createTextField() {
+        return new SpringTextField();
+    }
+    public ComboBox createComboBox() {
+        return new SpringComboBox();
+    }
+end note
+
+class SummerSkinFactory {
+    Button createButton();
+    TextField createTextField();
+    ComboBox createComboBox();
+}
+
+note top of SummerSkinFactory
+    public Button createButton() {
+        return new SummerButton();
+    }
+    public TextField createTextField() {
+        return new SummerTextField();
+    }
+    public ComboBox createComboBox() {
+        return new SummerComboBox();
+    }
+end note
+
+SpringSkinFactory ..|> SkinFactory
+SummerSkinFactory ..|> SkinFactory
+SpringSkinFactory ..|> SpringButton
+SummerSkinFactory ..|> SummerButton
+SpringSkinFactory ..|> SpringComboBox
+SummerSkinFactory ..|> SummerComboBox
+SpringSkinFactory ..|> SpringTextField
+SummerSkinFactory ..|> SummerTextField
+
+class Client
+Client ..> Button
+Client ..> TextField
+Client ..> ComboBox
+Client ..> SkinFactory
+
+@enduml
