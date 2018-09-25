@@ -8,7 +8,6 @@ public class PictureReaderFactory {
         } else if("jpg".equals(type)) {
             return new JpgPictureReader();
         }
-
         return null;
     }
 

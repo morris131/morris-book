@@ -1,8 +1,8 @@
 package com.morris.pattern.factory.demo.v2;
 
-public class GifPictureReaderFactory implements PictureReaderFactory {
+public class JpgPictureReaderFactory implements PictureReaderFactory {
     @Override
     public PictureReader createPictureReader() {
-        return new GifPictureReader();
+        return new JpgPictureReader();
     }
 }

@@ -27,6 +27,4 @@ class Client
 Client ..> PictureReaderFactory
 Client ..> PictureReader
 
-
-
 @enduml

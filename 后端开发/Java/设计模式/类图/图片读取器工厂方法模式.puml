@@ -1,0 +1,44 @@
+@startuml
+
+interface PictureReader {
+    +void read()
+}
+
+class GifPictureReader {
+    +void read()
+}
+
+class JpgPictureReader {
+    +void read()
+}
+
+PictureReader <|.. GifPictureReader
+PictureReader <|.. JpgPictureReader
+
+interface PictureReaderFactory {
+     +PictureReader createPictureReader()
+}
+
+class GifPictureReaderFactory {
+    +PictureReader createPictureReader()
+}
+
+note top of GifPictureReaderFactory
+return new GifPictureReader()
+end note
+
+class JpgPictureReaderFactory {
+    +PictureReader createPictureReader()
+}
+
+note top of JpgPictureReaderFactory
+return new JpgPictureReader()
+end note
+
+GifPictureReaderFactory ..|> PictureReaderFactory
+JpgPictureReaderFactory ..|> PictureReaderFactory
+
+GifPictureReaderFactory ..> GifPictureReader
+JpgPictureReaderFactory ..> JpgPictureReader
+
+@enduml
