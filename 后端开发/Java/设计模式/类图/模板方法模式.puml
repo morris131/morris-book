@@ -1,0 +1,29 @@
+@startuml
+
+title 模板方法模式类图
+
+abstract AbstractClass {
+    + void templateMethod()
+    # void doSomething()
+}
+
+note bottom of AbstractClass
+public void templateMethod() {
+    xxx
+    doSomething();
+    xxx
+}
+end note
+
+class ConcreteClass1 {
+    + void doSomething()
+}
+
+class ConcreteClass2 {
+    + void doSomething()
+}
+
+ConcreteClass1 --|> AbstractClass
+ConcreteClass2 --|> AbstractClass
+
+@enduml
