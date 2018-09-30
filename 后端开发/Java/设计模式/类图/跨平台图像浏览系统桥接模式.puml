@@ -1,6 +1,6 @@
 @startuml
 
-title 跨平台图像浏览系统初始设计方案类图
+title 跨平台图像浏览系统桥接模式类图
 
 abstract class Image {
     # ImageImp imageImp
