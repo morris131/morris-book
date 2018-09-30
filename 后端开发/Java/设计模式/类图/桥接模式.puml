@@ -1,0 +1,23 @@
+@startuml
+
+title 桥接模式类图
+
+abstract class Abstraction {
+    + Operation()
+}
+
+class RefindedAbstraction
+
+RefindedAbstraction --|> Abstraction
+
+abstract class Implementor {
+    + OperationImp()
+}
+
+class ConcreteImplementor
+
+ConcreteImplementor --|> Implementor
+
+Abstraction o..> Implementor:+imp
+
+@enduml

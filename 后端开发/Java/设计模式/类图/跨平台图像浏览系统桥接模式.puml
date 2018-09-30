@@ -1,0 +1,53 @@
+@startuml
+
+title 跨平台图像浏览系统初始设计方案类图
+
+abstract class Image {
+    # ImageImp imageImp
+    + void setImageImp(ImageImp imageImp)
+    + void parseFile(String fileName)
+}
+
+class BmpImage {
+    + void parseFile(String fileName)
+}
+
+class JpgImage {
+    + void parseFile(String fileName)
+}
+class GifImage {
+    + void parseFile(String fileName)
+}
+class PngImage {
+    + void parseFile(String fileName)
+}
+
+BmpImage --|> Image
+JpgImage --|> Image
+GifImage --|> Image
+PngImage --|> Image
+
+abstract class ImageImp {
+    + void doPaint(Matix m)
+}
+
+class WindowsImageImp {
+    + void doPaint(Matix m)
+}
+class LinuxImageImp {
+    + void doPaint(Matix m)
+}
+class UnixImageImp {
+    + void doPaint(Matix m)
+}
+
+WindowsImageImp --|> ImageImp
+LinuxImageImp --|> ImageImp
+UnixImageImp --|> ImageImp
+
+Image o--> ImageImp
+
+ImageImp ..> Matix
+
+
+@enduml
