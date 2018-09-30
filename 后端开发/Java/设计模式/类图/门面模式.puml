@@ -1,0 +1,20 @@
+@startuml
+
+title 门面模式类图
+
+class Facade
+
+class SystemA
+class SystemB
+class SystemC
+
+Facade --> SystemA
+Facade --> SystemB
+Facade --> SystemC
+
+class Client
+Client --> Facade
+
+
+
+@enduml
