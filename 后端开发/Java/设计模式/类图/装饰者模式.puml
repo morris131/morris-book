@@ -1,0 +1,36 @@
+@startuml
+
+title 装饰者模式类图
+
+abstract class Compoent {
+    + void operation()
+}
+
+class ConcreteCompoent {
+    + void operation()
+}
+
+abstract class Dicorator {
+    # Compoent compoent
+    + void operation()
+}
+
+Compoent <|-- ConcreteCompoent
+Compoent <|-- Dicorator
+Compoent <--o Dicorator:+compoent
+
+class ConcreteDecorator {
+    + void operation()
+    + void addBehavior()
+}
+
+Dicorator <|-- ConcreteDecorator
+
+note left of ConcreteDecorator
+public void operation(){
+    compoent.operation();
+    addBehavior();
+}
+end note
+
+@enduml
