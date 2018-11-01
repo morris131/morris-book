@@ -1,0 +1,25 @@
+@startuml
+
+title 迭代器模式类图
+
+interface Iterator {
+    + next()
+    + hasNext()
+    + remove()
+}
+
+class ConcreteIterator
+
+Iterator <|.. ConcreteIterator
+
+class Aggregate {
+    + createIterator()
+}
+
+class ConcreteAggregate
+
+Aggregate <|.. ConcreteAggregate
+
+ConcreteAggregate --> ConcreteIterator
+
+@enduml
