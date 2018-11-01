@@ -23,10 +23,5 @@ public class ConcreteIterator<T> implements Iterator<T> {
         return !(cursor == vector.size());
     }
 
-    @Override
-    public T remove() {
-        return vector.remove(cursor);
-    }
-
 
 }

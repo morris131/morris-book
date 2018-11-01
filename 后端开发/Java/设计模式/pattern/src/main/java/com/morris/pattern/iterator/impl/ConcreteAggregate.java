@@ -12,11 +12,6 @@ public class ConcreteAggregate<T> implements Aggregate <T> {
     }
 
     @Override
-    public boolean remove(T t) {
-        return vector.remove(t);
-    }
-
-    @Override
     public Iterator<T> iterator() {
         return new ConcreteIterator<>(vector);
     }

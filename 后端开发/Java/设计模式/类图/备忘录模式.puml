@@ -1,0 +1,30 @@
+@startuml
+
+title 备忘录模式类图
+
+class Originator {
+    - String state
+    + Memento createMemento()
+    + void restoreMemento()
+}
+
+class Memento {
+    - String state
+    + void setState()
+    + String getState()
+}
+
+class Caretaker {
+}
+
+class Client {
+}
+
+Originator ..> Memento
+Caretaker o--> Memento
+
+Client ..> Originator
+Client ..> Caretaker
+
+
+@enduml
