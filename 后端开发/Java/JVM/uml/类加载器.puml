@@ -1,0 +1,17 @@
+@startuml
+
+title 类加载器的双亲委托机制
+
+class BootStrapClassLoader
+
+class ExtClassLoader
+
+class ApplicationClassLoader
+
+class CustomClassLoader
+
+BootStrapClassLoader <-- ExtClassLoader
+ExtClassLoader <-- ApplicationClassLoader
+ApplicationClassLoader <-- CustomClassLoader
+
+@enduml
