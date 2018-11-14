@@ -19,10 +19,12 @@ public class OverLoadTest {
 		System.out.println(d == a+b);*/
 		
 		
-		Boolean a = new Boolean(true);
+/*		Boolean a = new Boolean(true);
 		Boolean b = true;
 		
-		System.out.println(a == b);
+		System.out.println(a == b);*/
+
+		System.out.println(Thread.currentThread().getContextClassLoader());
 		
 		
 	}
