@@ -1,12 +1,12 @@
-package com.morris.jvm.load;
+package com.morris.jvm.classloader;
 
 public class StaticTest {
 
     public static int k = 0;
 
-    public static StaticTest t1 = new StaticTest("t1"); 
+    public static StaticTest t1 = new StaticTest("t1");
 
-    public static StaticTest t2 = new StaticTest("t2"); 
+    public static StaticTest t2 = new StaticTest("t2");
 
     public static int i = print("i");
 
@@ -36,6 +36,7 @@ public class StaticTest {
     
     public static void main(String[] args) {
         new StaticTest("init");
+        
     }
  
 }
