@@ -1,5 +1,7 @@
 # JVM内存模型
-![image](https://note.youdao.com/yws/public/resource/1bb88a67ad9b5c02b9e21ae3dbb534f4/xmlnote/74C24EB74706444E861B7C32BA15E10E/1833)
+
+下图是jdk7内存模型图。
+git
 
 ## 程序计数器
 程序计数器是当前线程所执行的字节码的行号指示器。如果线程正在执行的是一个Java方法，这个计数器记录的是正在执行的虚拟机字节码指令的地址；如果正在执行的是Natvie方法，这个计数器值则为空。此内存区域是唯一一个在Java虚拟机规范中没有规定任何OutOfMemoryError 情况的区域。
