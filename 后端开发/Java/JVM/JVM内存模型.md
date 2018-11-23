@@ -48,6 +48,9 @@ Java堆存放对象实例以及数组，可以根据虚拟机参数-Xmx和-Xms�
 在JDK1.4中新加入了NIO（New Input/Output）类，引入了一种基于通道（Channel）与缓冲区（Buffer）的I/O方式，它可以使用Native函数库直接分配堆外内存，然后通过一个存储在Java堆里面的DirectByteBuffer 对象作为这块内存的引用进行操作。这样能在一些场景中显著提高性能，因为避免了在Java堆和Native 堆中来回复制数据。
 
 ## 元空间
+
+![jvm8内存模型](https://github.com/morris131/morris-book/raw/master/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java/JVM/images/jvm8%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%20.png)
+
 方法区和永久代有着本质的区别。前者是 JVM 的规范，而后者则是 JVM 规范的一种实现，并且只有HotSpot才有 “PermGen space”，而对于其他类型的虚拟机，如 JRockit（Oracle）、J9（IBM） 并没有“PermGen space”。
 
 元空间的本质和永久代类似，都是对JVM规范中方法区的实现。不过元空间与永久代之间最大的区别在于：元空间并不在虚拟机中，而是使用本地内存。因此，默认情况下，元空间的大小仅受本地内存限制，但可以通过以下参数来指定元空间的大小：

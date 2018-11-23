@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * VM args: -XX:PermSize=2m -XX:MaxPermSize=2m
+ * jdk 7运行
  *
  */
 public class ConstantPoolOOM {
