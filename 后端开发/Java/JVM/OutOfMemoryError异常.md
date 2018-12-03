@@ -1,13 +1,13 @@
 ---
-title: JVM内存模型
+title: OutOfMemoryError异常
 date: 2018-10-07
 categories: JVM
 tags: [OOM]
 ---
 
-## OutOfMemoryError异常
+# OutOfMemoryError异常
 
-### 堆溢出
+## 堆溢出
 堆存放的是对象和数组，只要不断的创建对象或数组，堆就会溢出。
 
 -Xmx：设置JVM最大堆内存。
@@ -78,7 +78,7 @@ Heap
 
 ```
 
-### 虚拟机栈溢出
+## 虚拟机栈溢出
 虚拟机栈这个区域会出现两种异常状况：
 1. 线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError 异常； 
 2. 当虚拟机栈扩展时无法申请到足够的内存时会抛出OutOfMemoryError异常。（无法重现）
@@ -121,7 +121,7 @@ java.lang.StackOverflowError
 	... ...
 ```
 
-### 本地方法栈溢出
+## 本地方法栈溢出
 不断的创建线程就会导致本地方法栈溢出。
 
 [NativeMethodStackOOM.java]()
@@ -150,12 +150,12 @@ public class NativeMethodStackOOM {
 ```
 此代码会出现假死，谨慎运行。
 
-### 方法区溢出
+## 方法区溢出
 
 -XX:PermSize：指定永久代初始内存
 -XX:MaxPermSize：指定永久代最大内存
 
-### 字符串常量池方法溢出
+## 字符串常量池方法溢出
 
 [ConstantPoolOOM.java]()
 ```
@@ -192,7 +192,7 @@ java.lang.OutOfMemoryError: PermGen space
 	at java.lang.ClassLoader.getSystemClassLoader(ClassLoader.java:1474)
 ```
 
-### 方法区内存溢出
+## 方法区内存溢出
 
 ```
 package com.morris.jvm.oom;
@@ -247,7 +247,7 @@ java.lang.OutOfMemoryError: PermGen space
 
 ```
 
-### 直接内存溢出
+## 直接内存溢出
 
 ```
 package com.morris.jvm.oom;

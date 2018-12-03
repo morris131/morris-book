@@ -1,6 +1,12 @@
-## JDK命令行工具
+title: JDK命令行工具
+date: 2018-10-20
+categories: JVM
+tags: [JDK命令行工具]
+---
 
-### jps:虚拟机进程状况工具
+# JDK命令行工具
+
+## jps:虚拟机进程状况工具
 jps（JVM Process Status Tool）可以列出正在运行的虚拟机进程，并显示虚拟机执行主类（Main Class,main()函数所在的类）名称以及这些进程的本地虚拟机唯一ID（Local Virtual Machine Identifier,LVMID）。虽然功能比较单一，但它是使用频率最高的JDK命令行工具，因为其他的JDK工具大多需要输入它查询到的LVMID来确定要监控的是哪一个虚拟机进程。对于本地虚拟机进程来说，LVMID与操作系统的进程ID（Process Identifier,PID）是一致的，使用Windows的任务管理器或者UNIX的ps命令也可以查询到虚拟机进程的LVMID，但如果同时启动了多个虚拟机进程，无法根据进程名称定位时，那就只能依赖jps命令显示主类的功能才能区分了。
 
 命令格式
@@ -14,8 +20,6 @@ option参数
 - -m : 输出JVM启动时传递给main()的参数
 - -v : 输出JVM启动时显示指定的JVM参数
 
-其中[option]、[hostid]参数也可以不写。
-
 示例：
 
 ```
@@ -24,7 +28,7 @@ option参数
 5436 sun.tools.jps.Jps
 ```
 
-### jinfo Java配置信息工具
+### jinfo:Java配置信息工具
 jinfo(JVM Configuration info)这个命令作用是实时查看和调整虚拟机运行参数。之前的jps -v口令只能查看到显示指定的参数，如果想要查看未被显示指定的参数的值就要使用jinfo。
 
 命令格式
@@ -79,7 +83,7 @@ jstat -<option> [-t] [-h<lines>] <vmid> [<interval> [<count>]]
 参数interval和count代表查询间隔(单位毫秒)和次数，如果省略这两个参数，说明只查询一次。
 
 假设需要每250毫秒查询一次进程2764垃圾收集状况，一共查询20次，那命令应当是：jstat -gc 2764 250 20
-
+j
 选项option代表着用户希望查询的虚拟机信息，主要分为3类：类装载、垃圾收集、运行期编译状况，具体选项及作用如下：
 - -class监视类装载，卸载数量，总空间以及类装载所耗费的时间
 - -gc 监视Java堆状况，包括Eden区，两个survivor区，老年代，永久代的容量，已用空间，GC时间合计等信息
