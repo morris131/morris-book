@@ -1,4 +1,4 @@
-package com.morris.pattern.observer.impl;
+package com.morris.pattern.observer.demo;
 
 public interface Observer {
     void update(String msg);

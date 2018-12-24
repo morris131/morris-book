@@ -1,4 +1,4 @@
-package com.morris.pattern.observer.impl;
+package com.morris.pattern.observer.demo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +15,9 @@ public abstract class Subject {
         observers.remove(observer);
     }
 
-    protected void notifyObservers(String msg) {
+    protected void notifyObservers(String news) {
         for(Observer observer: observers) {
-            observer.update(msg);
+            observer.update(news);
         }
     }
 }
