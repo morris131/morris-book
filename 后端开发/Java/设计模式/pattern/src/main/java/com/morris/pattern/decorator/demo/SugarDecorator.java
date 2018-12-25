@@ -1,4 +1,4 @@
-package com.morris.pattern.decorator;
+package com.morris.pattern.decorator.demo;
 
 public class SugarDecorator extends Decorator {
 
