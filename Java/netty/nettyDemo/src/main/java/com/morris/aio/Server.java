@@ -6,10 +6,13 @@ import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousServerSocketChannel;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.CompletionHandler;
+import java.util.concurrent.CountDownLatch;
 
 public class Server {
 
     public static void main(String[] args) throws IOException, InterruptedException {
+
+		CountDownLatch countDownLatch = new CountDownLatch(1);
 
 		AsynchronousServerSocketChannel asynchronousServerSocketChannel = AsynchronousServerSocketChannel.open();
 
@@ -18,6 +21,9 @@ public class Server {
 		asynchronousServerSocketChannel.accept(asynchronousServerSocketChannel, new CompletionHandler<AsynchronousSocketChannel, AsynchronousServerSocketChannel>() {
 			@Override
 			public void completed(AsynchronousSocketChannel result, AsynchronousServerSocketChannel attachment) {
+
+				attachment.accept(attachment, this);
+
 				ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
 				result.read(byteBuffer, result , new CompletionHandler<Integer, AsynchronousSocketChannel>() {
 					@Override
@@ -58,8 +64,8 @@ public class Server {
 		});
 
 		System.out.println("server is start on port: 8899");
-		Thread.sleep(Integer.MAX_VALUE);
 
+		countDownLatch.await();
 
     }
 }

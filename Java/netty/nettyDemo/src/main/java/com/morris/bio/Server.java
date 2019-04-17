@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class BIOServer {
+public class Server {
 
     public static int PORT = 8899;
 

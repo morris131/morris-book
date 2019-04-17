@@ -25,12 +25,11 @@ public class Client {
 
         boolean connect = serverSocketChannel.connect(new InetSocketAddress("127.0.0.1", PORT));
 
-        if(connect) {
+        if (connect) {
             serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT); // 注册监听的事件
         } else {
             serverSocketChannel.register(selector, SelectionKey.OP_CONNECT); // 注册监听的事件
         }
-
 
         while (stop) {
 
@@ -44,12 +43,12 @@ public class Client {
                 SelectionKey key = selectionKeyIterator.next();
                 selectionKeyIterator.remove();
 
-                if(key.isValid()) {
-                    SocketChannel sc = (SocketChannel)key.channel();
+                if (key.isValid()) {
+                    SocketChannel sc = (SocketChannel) key.channel();
 
-                    if(key.isConnectable()) {
+                    if (key.isConnectable()) {
 
-                        if(sc.finishConnect()) {
+                        if (sc.finishConnect()) {
                             sc.register(selector, SelectionKey.OP_READ);
 
                             String response = "hello server";
@@ -64,10 +63,10 @@ public class Client {
 
                     }
 
-                    if(key.isReadable()){
+                    if (key.isReadable()) {
                         ByteBuffer buf = ByteBuffer.allocate(1024);
                         int bytesRead = sc.read(buf);
-                        if(bytesRead > 0){
+                        if (bytesRead > 0) {
                             buf.flip();
 
                             byte[] bytes = new byte[buf.remaining()];
@@ -80,50 +79,12 @@ public class Client {
                             key.cancel();
                             sc.close();
 
-                            stop=false;
+                            stop = false;
 
                         }
                     }
                 }
-
-
-
             }
-
         }
-
-
-
-    }
-
-    public static void handleAccept(SelectionKey key) throws IOException{
-        ServerSocketChannel ssChannel = (ServerSocketChannel)key.channel();
-        SocketChannel sc = ssChannel.accept();
-        sc.configureBlocking(false);
-        sc.register(key.selector(), SelectionKey.OP_READ);
-    }
-    public static void handleRead(SelectionKey key) throws IOException{
-        SocketChannel sc = (SocketChannel)key.channel();
-        ByteBuffer buf = ByteBuffer.allocate(1024);
-        long bytesRead = sc.read(buf);
-        if(bytesRead>0){
-            buf.flip();
-
-            byte[] bytes = new byte[buf.remaining()];
-            buf.get(bytes);
-
-            String body = new String(bytes);
-
-            System.out.println("receive from client: " + body);
-        }
-    }
-    public static void handleWrite(SelectionKey key) throws IOException{
-        ByteBuffer buf = (ByteBuffer)key.attachment();
-        buf.flip();
-        SocketChannel sc = (SocketChannel) key.channel();
-        while(buf.hasRemaining()){
-            sc.write(buf);
-        }
-        buf.compact();
     }
 }

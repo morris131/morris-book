@@ -72,45 +72,7 @@ public class Server {
                         }
                     }
                 }
-
-
-
             }
-
         }
-
-
-
-    }
-
-    public static void handleAccept(SelectionKey key) throws IOException{
-        ServerSocketChannel ssChannel = (ServerSocketChannel)key.channel();
-        SocketChannel sc = ssChannel.accept();
-        sc.configureBlocking(false);
-        sc.register(key.selector(), SelectionKey.OP_READ);
-    }
-    public static void handleRead(SelectionKey key) throws IOException{
-        SocketChannel sc = (SocketChannel)key.channel();
-        ByteBuffer buf = ByteBuffer.allocate(1024);
-        long bytesRead = sc.read(buf);
-        if(bytesRead>0){
-            buf.flip();
-
-            byte[] bytes = new byte[buf.remaining()];
-            buf.get(bytes);
-
-            String body = new String(bytes);
-
-            System.out.println("receive from client: " + body);
-        }
-    }
-    public static void handleWrite(SelectionKey key) throws IOException{
-        ByteBuffer buf = (ByteBuffer)key.attachment();
-        buf.flip();
-        SocketChannel sc = (SocketChannel) key.channel();
-        while(buf.hasRemaining()){
-            sc.write(buf);
-        }
-        buf.compact();
     }
 }

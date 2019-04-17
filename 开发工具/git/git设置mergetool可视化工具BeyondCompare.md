@@ -1,6 +1,6 @@
 ---
 title: git设置mergetool可视化工具BeyondCompare
-date: 2018-04-17
+date: 2019-04-17
 categories: git
 tags: [git,mergetool,BeyondCompare]
 ---
