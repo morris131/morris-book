@@ -10,7 +10,7 @@ tags: [AIO,netty]
 与NIO不同，当进行读写操作时，只须直接调用API的read或write方法即可。这两种方法均为异步的，对于读操作而言，当有流可读取时，操作系统会将可读的流传入read方法的缓冲区，并通知应用程序；对于写操作而言，当操作系统将write方法传递的流写入完毕时，操作系统主动通知应用程序。  即可以理解为，read/write方法都是异步的，完成后会主动调用回调函数。
 
 ## server
-
+[Server.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/aio/Server.java)
 ```java
 package com.morris.aio;
 
@@ -86,6 +86,7 @@ public class Server {
 ```
 
 ## client
+[Client.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/aio/Client.java)
 ```java
 package com.morris.aio;
 

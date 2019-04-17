@@ -10,6 +10,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 public class Server {
 
+    public static int PORT = 8899;
+
     public static void main(String[] args) throws InterruptedException {
 
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -27,7 +29,9 @@ public class Server {
                     });
 
             // 启动 server.
-            ChannelFuture f = b.bind(8899).sync();
+            ChannelFuture f = b.bind(PORT).sync();
+
+            System.out.println("server is start on port: " + PORT);
 
             // 等待socket关闭
             f.channel().closeFuture().sync();

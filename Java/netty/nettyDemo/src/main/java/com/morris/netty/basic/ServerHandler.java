@@ -24,8 +24,6 @@ public class ServerHandler extends ChannelHandlerAdapter {
         } finally {
             ReferenceCountUtil.release(msg);
         }
-
-
     }
 
     @Override

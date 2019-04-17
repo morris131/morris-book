@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class FakeBIOServer {
 
-    public static int PORT = 8899;
+    public static final int PORT = 8899;
 
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(PORT);

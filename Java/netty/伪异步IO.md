@@ -2,14 +2,14 @@
 title: 伪异步IO
 date: 2019-04-17
 categories: netty
-tags: [伪异步IO,netty]
+tags: [netty]
 ---
 
 # 伪异步IO
 伪异步IO只是用线程池管理BIO中的线程,其他代码与BIO一致。
 
 ## server
-[FakeBIOServer.java]()
+[FakeBIOServer.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/fakebio/FakeBIOServer.java)
 ```java
 package com.morris.fakebio;
 

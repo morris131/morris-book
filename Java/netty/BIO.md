@@ -8,7 +8,7 @@ tags: [BIO,netty]
 # BIO
 
 ## server
-[Server.java]()
+[Server.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/bio/Server.java)
 ```java
 package com.morris.bio;
 
@@ -34,7 +34,7 @@ public class Server {
 
 }
 ```
-[ServerHandler.java]()
+[ServerHandler.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/bio/ServerHandler.java)
 ```java
 package com.morris.bio;
 
@@ -101,7 +101,7 @@ public class ServerHandler implements Runnable {
 ```
 
 ## client
-[Client.java]()
+[Client.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/bio/Client.java)
 ```java
 package com.morris.bio;
 

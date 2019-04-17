@@ -10,13 +10,15 @@ import java.util.concurrent.CountDownLatch;
 
 public class Server {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+	public static final int PORT = 8899;
+
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		CountDownLatch countDownLatch = new CountDownLatch(1);
 
 		AsynchronousServerSocketChannel asynchronousServerSocketChannel = AsynchronousServerSocketChannel.open();
 
-		asynchronousServerSocketChannel.bind(new InetSocketAddress(8899));
+		asynchronousServerSocketChannel.bind(new InetSocketAddress(PORT));
 
 		asynchronousServerSocketChannel.accept(asynchronousServerSocketChannel, new CompletionHandler<AsynchronousSocketChannel, AsynchronousServerSocketChannel>() {
 			@Override
@@ -63,7 +65,7 @@ public class Server {
 			}
 		});
 
-		System.out.println("server is start on port: 8899");
+		System.out.println("server is start on port: " + PORT);
 
 		countDownLatch.await();
 
