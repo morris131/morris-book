@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "com.morris.netty.serialize.protobuf";
+option java_outer_classname = "UserRequestProto";
+
+message UserRequest {
+	int32 age = 1;
+	string name = 2;
+}
