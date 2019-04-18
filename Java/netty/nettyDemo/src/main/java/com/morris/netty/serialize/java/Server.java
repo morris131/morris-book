@@ -15,6 +15,8 @@ import io.netty.handler.codec.string.StringDecoder;
 
 public class Server {
 
+    public static final int PORT = 8899;
+
     public static void main(String[] args) throws InterruptedException {
 
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -27,14 +29,16 @@ public class Server {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new ObjectDecoder(1024*1024, ClassResolvers.weakCachingConcurrentResolver(this.getClass().getClassLoader())));
+                            ch.pipeline().addLast(new ObjectDecoder(1024 * 1024, ClassResolvers.weakCachingConcurrentResolver(this.getClass().getClassLoader())));
                             ch.pipeline().addLast(new ObjectEncoder());
                             ch.pipeline().addLast(new ServerHandler());
                         }
                     });
 
             // 启动 server.
-            ChannelFuture f = b.bind(8899).sync();
+            ChannelFuture f = b.bind(PORT).sync();
+
+            System.out.println("server is start on port: " + PORT);
 
             // 等待socket关闭
             f.channel().closeFuture().sync();

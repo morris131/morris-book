@@ -1,5 +1,6 @@
 package com.morris.netty.serialize.java;
 
+import com.morris.netty.serialize.pojo.UserRequest;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.ReferenceCountUtil;

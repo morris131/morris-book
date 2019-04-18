@@ -1,5 +1,6 @@
 package com.morris.netty.serialize.marshalling;
 
+import com.morris.netty.serialize.java.ClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -24,7 +25,6 @@ public class Client {
             Bootstrap b = new Bootstrap();
             b.group(workerGroup)
                     .channel(NioSocketChannel.class)
-                    //.handler(new LoggingHandler(LogLevel.INFO))
                     .option(ChannelOption.TCP_NODELAY, true)
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
@@ -46,5 +46,3 @@ public class Client {
     }
 
 }
-
-

@@ -1,26 +1,19 @@
-package com.morris.netty.fixlength;
+package com.morris.netty.frame.linebase;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.ReferenceCountUtil;
 
-public class ClientHandler extends ChannelHandlerAdapter {
+public class ServerHandler extends ChannelHandlerAdapter {
 
-    @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush(Unpooled.copiedBuffer("aaaa".getBytes()));
-        ctx.writeAndFlush(Unpooled.copiedBuffer("bbbbbbb".getBytes()));
-        ctx.writeAndFlush(Unpooled.copiedBuffer("ccccccccccc".getBytes()));
-    }
+    private int count = 0;
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         try {
-
-            System.out.println("receive from server: " + msg);
-
-            ctx.close();
+            System.out.println("receive from client: " + msg);
+            ctx.writeAndFlush(Unpooled.copiedBuffer(("hello client" + (++count) + "\n").getBytes()));
 
         } finally {
             ReferenceCountUtil.release(msg);

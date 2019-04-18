@@ -10,7 +10,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 public class Server {
 
-    public static int PORT = 8899;
+    public static final int PORT = 8899;
 
     public static void main(String[] args) throws InterruptedException {
 

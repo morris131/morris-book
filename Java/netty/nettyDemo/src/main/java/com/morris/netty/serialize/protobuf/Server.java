@@ -14,6 +14,8 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 
 public class Server {
 
+    public static final int PORT = 8899;
+
     public static void main(String[] args) throws InterruptedException {
 
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -23,7 +25,6 @@ public class Server {
             ServerBootstrap b = new ServerBootstrap();
             b.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    //.handler(new LoggingHandler(LogLevel.INFO))
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
@@ -36,7 +37,9 @@ public class Server {
                     });
 
             // 启动 server.
-            ChannelFuture f = b.bind(8899).sync();
+            ChannelFuture f = b.bind(PORT).sync();
+
+            System.out.println("server is start on port: " + PORT);
 
             // 等待socket关闭
             f.channel().closeFuture().sync();

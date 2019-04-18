@@ -1,4 +1,4 @@
-package com.morris.netty.fixlength;
+package com.morris.netty.frame.delimiterbase;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
@@ -12,18 +12,11 @@ public class ServerHandler extends ChannelHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         try {
-
             System.out.println("receive from client: " + msg);
-
-            ctx.writeAndFlush(Unpooled.copiedBuffer("hello client".getBytes()));
-            //ctx.writeAndFlush(Unpooled.copiedBuffer("hello client2$_".getBytes()));
-            //ctx.writeAndFlush(Unpooled.copiedBuffer("hello client3$_".getBytes()));
-
+            ctx.writeAndFlush(Unpooled.copiedBuffer(("hello client" + (++count) + "$_").getBytes()));
         } finally {
             ReferenceCountUtil.release(msg);
         }
-
-
     }
 
     @Override

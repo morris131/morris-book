@@ -1,4 +1,4 @@
-package com.morris.netty.paste;
+package com.morris.netty.frame.fail;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,6 +9,8 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 public class Server {
+
+    public static final int PORT = 8899;
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -27,7 +29,9 @@ public class Server {
                     });
 
             // 启动 server.
-            ChannelFuture f = b.bind(8899).sync();
+            ChannelFuture f = b.bind(PORT).sync();
+
+            System.out.println("server is start on port: " + PORT);
 
             // 等待socket关闭
             f.channel().closeFuture().sync();

@@ -1,4 +1,4 @@
-package com.morris.netty.serialize.java;
+package com.morris.netty.serialize.pojo;
 
 import java.io.Serializable;
 

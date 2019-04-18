@@ -1,5 +1,6 @@
 package com.morris.netty.serialize.java;
 
+import com.morris.netty.serialize.pojo.UserResponse;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.ReferenceCountUtil;
@@ -21,7 +22,6 @@ public class ServerHandler extends ChannelHandlerAdapter {
         } finally {
             ReferenceCountUtil.release(msg);
         }
-
 
     }
 

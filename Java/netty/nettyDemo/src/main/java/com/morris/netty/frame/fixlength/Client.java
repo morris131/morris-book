@@ -1,43 +1,41 @@
-package com.morris.netty.linebase;
+package com.morris.netty.frame.fixlength;
 
-import io.netty.bootstrap.ServerBootstrap;
+import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.FixedLengthFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 
-public class Server {
+public class Client {
 
     public static void main(String[] args) throws InterruptedException {
 
-        EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
-            ServerBootstrap b = new ServerBootstrap();
-            b.group(bossGroup, workerGroup)
-                    .channel(NioServerSocketChannel.class)
-                    .childHandler(new ChannelInitializer<SocketChannel>() {
+            Bootstrap b = new Bootstrap();
+            b.group(workerGroup)
+                    .channel(NioSocketChannel.class)
+                    .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new LineBasedFrameDecoder(1 << 10));
+                            ch.pipeline().addLast(new FixedLengthFrameDecoder(16));
                             ch.pipeline().addLast(new StringDecoder());
-                            ch.pipeline().addLast(new ServerHandler());
+                            ch.pipeline().addLast(new ClientHandler());
                         }
                     });
 
             // 启动 server.
-            ChannelFuture f = b.bind(8899).sync();
+            ChannelFuture f = b.connect("127.0.0.1", 8899).sync();
 
             // 等待socket关闭
             f.channel().closeFuture().sync();
         } finally {
             workerGroup.shutdownGracefully();
-            bossGroup.shutdownGracefully();
         }
     }
 

@@ -1,18 +1,18 @@
-package com.morris.netty.delimiterbase;
+package com.morris.netty.frame.fixlength;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.DelimiterBasedFrameDecoder;
-import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.FixedLengthFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 
 public class Server {
+
+    public static final int PORT = 8899;
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -26,7 +26,7 @@ public class Server {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1 << 10, Unpooled.copiedBuffer("$_".getBytes())));
+                            ch.pipeline().addLast(new FixedLengthFrameDecoder(16));
                             ch.pipeline().addLast(new StringDecoder());
                             ch.pipeline().addLast(new ServerHandler());
                         }
@@ -34,6 +34,8 @@ public class Server {
 
             // 启动 server.
             ChannelFuture f = b.bind(8899).sync();
+
+            System.out.println("server is start on port: " + PORT);
 
             // 等待socket关闭
             f.channel().closeFuture().sync();

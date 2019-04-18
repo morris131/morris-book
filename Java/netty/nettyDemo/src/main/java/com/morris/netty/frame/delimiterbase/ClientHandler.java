@@ -1,27 +1,30 @@
-package com.morris.netty.linebase;
+package com.morris.netty.frame.delimiterbase;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.ReferenceCountUtil;
 
-public class ServerHandler extends ChannelHandlerAdapter {
+public class ClientHandler extends ChannelHandlerAdapter {
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        for(int i = 1 ; i <= 5; i++) {
+            ctx.writeAndFlush(Unpooled.copiedBuffer(("hello" + i + "$_").getBytes()));
+        }
+    }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         try {
 
-            System.out.println("receive from client: " + msg);
+            System.out.println("receive from server: " + msg);
 
-            ctx.writeAndFlush(Unpooled.copiedBuffer("hello client1\n".getBytes()));
-            ctx.writeAndFlush(Unpooled.copiedBuffer("hello client2\n".getBytes()));
-            ctx.writeAndFlush(Unpooled.copiedBuffer("hello client3\n".getBytes()));
+            ctx.close();
 
         } finally {
             ReferenceCountUtil.release(msg);
         }
-
-
     }
 
     @Override

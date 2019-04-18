@@ -1,5 +1,7 @@
-package com.morris.netty.serialize.marshalling;
+package com.morris.netty.frame.fail;
 
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.ReferenceCountUtil;
@@ -8,17 +10,20 @@ public class ClientHandler extends ChannelHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        UserRequest request = new UserRequest();
-        request.setAge(18);
-        request.setName("morris");
-        ctx.writeAndFlush(request);
+
+        for(int i = 1 ; i <= 5; i++) {
+            ctx.writeAndFlush(Unpooled.copiedBuffer(("hello"+i).getBytes()));
+        }
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         try {
 
-            System.out.println("receive from server: " + msg);
+            ByteBuf receiveByteBuf = (ByteBuf) msg;
+            byte[] bytes = new byte[receiveByteBuf.readableBytes()];
+            receiveByteBuf.readBytes(bytes);
+            System.out.println("receive from server: " + new String(bytes));
 
             ctx.close();
 

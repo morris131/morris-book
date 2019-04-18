@@ -1,4 +1,4 @@
-package com.morris.netty.linebase;
+package com.morris.netty.frame.fixlength;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
@@ -9,9 +9,9 @@ public class ClientHandler extends ChannelHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush(Unpooled.copiedBuffer("aaaa\n".getBytes()));
-        ctx.writeAndFlush(Unpooled.copiedBuffer("bbbbbbb\n".getBytes()));
-        ctx.writeAndFlush(Unpooled.copiedBuffer("ccccccccccc\n".getBytes()));
+        for(int i = 1 ; i <= 5; i++) {
+            ctx.writeAndFlush(Unpooled.copiedBuffer(("hello" + i + "          ").getBytes()));
+        }
     }
 
     @Override
