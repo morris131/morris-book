@@ -11,7 +11,7 @@ tags: [netty]
 下载对应的[protoc](https://github.com/protocolbuffers/protobuf/releases)工具，用于生成实体类。
 
 编写proto文件
-[UserRequest.proto]()
+[UserRequest.proto](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/resource/proto/UserRequest.proto)
 ```
 syntax = "proto3";
 option java_package = "com.morris.netty.serialize.protobuf";
@@ -23,7 +23,7 @@ message UserRequest {
 }
 ```
 
-[UserResponseProto.proto]()
+[UserResponseProto.proto](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/resource/proto/UserResponseProto.proto)
 ```
 syntax = "proto3";
 option java_package = "com.morris.netty.serialize.protobuf";
