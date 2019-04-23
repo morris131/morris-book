@@ -22,7 +22,7 @@ import static io.netty.handler.codec.http.HttpMethod.GET;
 import static io.netty.handler.codec.http.HttpResponseStatus.*;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
-public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
+public class ServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
     @Override
     public void messageReceived(ChannelHandlerContext ctx, FullHttpRequest request) throws Exception {
@@ -133,9 +133,6 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
         return System.getProperty("user.dir") + File.separator + uri;
     }
 
-    private static final Pattern ALLOWED_FILE_NAME = Pattern
-            .compile("[A-Za-z0-9][-_A-Za-z0-9\\.]*");
-
     private static void sendListing(ChannelHandlerContext ctx, File dir) {
         FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1, OK);
         response.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
@@ -156,7 +153,8 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
                 continue;
             }
             String name = f.getName();
-            if (!ALLOWED_FILE_NAME.matcher(name).matches()) {
+
+            if(name.startsWith(".")) {
                 continue;
             }
             buf.append("<li>链接：<a href=\"");

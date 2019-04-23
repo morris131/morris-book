@@ -13,7 +13,7 @@
             //当有消息过来的时候触发
             websocket.onmessage = function(event){
                 var respMessage = document.getElementById("respMessage");
-                respMessage.value = respMessage.value + "\n" + event.data;
+                respMessage.value = event.data;
             }
 
             //连接关闭的时候触发

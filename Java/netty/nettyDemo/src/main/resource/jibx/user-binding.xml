@@ -1,0 +1,6 @@
+<binding>
+    <mapping name="user" class="com.morris.jibx.User">
+        <value name="name" field="name"/>
+        <value name="age" field="age"/>
+    </mapping>
+</binding>

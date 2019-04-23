@@ -1,5 +1,8 @@
-package com.morris.netty.protocol.websocket;
+package com.morris.netty.protocol.httpxml.server;
 
+import com.morris.netty.protocol.httpxml.codec.HttpXmlRequestDecoder;
+import com.morris.netty.protocol.httpxml.codec.HttpXmlResponseEncoder;
+import com.morris.netty.protocol.httpxml.pojo.UserResponse;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -10,9 +13,10 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
-import io.netty.handler.stream.ChunkedWriteHandler;
 
-public class Server {
+import java.net.InetSocketAddress;
+
+public class HttpXmlServer {
 
     private static final int port = 8899;
 
@@ -27,14 +31,16 @@ public class Server {
                         @Override
                         protected void initChannel(SocketChannel ch)
                                 throws Exception {
-                            ch.pipeline().addLast(new HttpRequestDecoder()); // 请求消息解码器
-                            ch.pipeline().addLast(new HttpObjectAggregator(65536));// 目的是将多个消息转换为单一的request或者response对象
-                            ch.pipeline().addLast(new HttpResponseEncoder());//响应解码器
-                            ch.pipeline().addLast(new ChunkedWriteHandler());//目的是支持异步大文件传输（）
-                            ch.pipeline().addLast(new ServerHandler());// 业务逻辑
+                            ch.pipeline().addLast("http-decoder", new HttpRequestDecoder());
+                            ch.pipeline().addLast("http-aggregator", new HttpObjectAggregator(65536));
+                            ch.pipeline().addLast("xml-decoder", new HttpXmlRequestDecoder(UserResponse.class, true));
+                            ch.pipeline().addLast("http-encoder", new HttpResponseEncoder());
+                            ch.pipeline().addLast("xml-encoder", new HttpXmlResponseEncoder());
+                            ch.pipeline().addLast("xmlServerHandler", new HttpXmlServerHandler());
                         }
                     });
-            ChannelFuture future = b.bind("127.0.0.1", port).sync();
+            ChannelFuture future = b.bind(new InetSocketAddress(port)).sync();
+            System.out.println("HTTP订购服务器启动，网址是 : " + "http://localhost:" + port);
             future.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();

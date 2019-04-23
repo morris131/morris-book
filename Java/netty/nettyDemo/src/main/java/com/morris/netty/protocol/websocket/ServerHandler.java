@@ -13,6 +13,8 @@ import io.netty.handler.codec.http.HttpRequest;
 import io.netty.handler.codec.http.websocketx.*;
 import io.netty.util.CharsetUtil;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 import static io.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
@@ -54,6 +56,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<Object> {
             return;
         }
 
+        // websocket服务器地址ws://localhost:8899/ws
         // 构造握手响应返回，本机测试
         WebSocketServerHandshakerFactory wsFactory = new WebSocketServerHandshakerFactory(
                 "ws://localhost:8899/ws", null, false);
@@ -67,7 +70,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<Object> {
     }
 
     private void handleWebSocketFrame(ChannelHandlerContext ctx,
-                                      WebSocketFrame frame) {
+                                      WebSocketFrame frame) throws InterruptedException {
 
         // 判断是否是关闭链路的指令
         if (frame instanceof CloseWebSocketFrame) {
@@ -92,10 +95,11 @@ public class ServerHandler extends SimpleChannelInboundHandler<Object> {
 
         System.out.println(ctx.channel() + " receive " + request);
 
-        ctx.writeAndFlush(
-                new TextWebSocketFrame(request
-                        + " , 欢迎使用Netty WebSocket服务，现在时刻："
-                        + new java.util.Date().toString()));
+        while (true) {
+            ctx.writeAndFlush(new TextWebSocketFrame("当前时间：" + LocalDateTime.now()));
+            TimeUnit.SECONDS.sleep(1);
+        }
+
     }
 
     private static void sendHttpResponse(ChannelHandlerContext ctx,
