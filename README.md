@@ -22,7 +22,6 @@
 		* [shell](服务器/Linux/shell)
 		
 * 数据库
-	* MySQL
-	* Oracle
+
 	* [MongoDB](数据库/MongoDB)
 
