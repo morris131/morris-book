@@ -12,6 +12,13 @@ Changes not staged for commit:
   (use "git checkout -- <file>..." to discard changes in working directory)
         modified:   readme.txt
 no changes added to commit (use "git add" and/or "git commit -a")
+
+
+
+
+
+
+
          ```
 2. 储藏当前工作现场“储藏”起来：
 
