@@ -1,15 +1,3 @@
-# linux下安装jdk
+# linux下jdk的安装
 
-1. 去官网下载jdk，[下载地址](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-
-2. 上传至/usr/local目录
-
-3. 解压
-```
-tar -zxvf jdk-8u211-linux-x64.tar.gz
-```
-
-4. 配置环境变量，在/etc/profile最后增加如下内容：
-```
-code
-```
+1. 去官网下载jdk，下载地址
