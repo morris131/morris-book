@@ -10,4 +10,7 @@ mvn clean package -Dmaven.test.skip=true
 ```
 上传源码至服务器/usr/local目录下
 
-3. 
+3.  启动服务
+```
+
+```
