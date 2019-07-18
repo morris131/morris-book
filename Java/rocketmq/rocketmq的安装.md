@@ -13,5 +13,9 @@
 # yum install unzip
 ```
 
-4. 创建
+4. 创建软连接
+```
+# ln -s rocketmq-all-4.4.0-bin-release rocketmq
+```
+
 
