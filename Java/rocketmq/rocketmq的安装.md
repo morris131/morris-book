@@ -42,4 +42,7 @@ JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m"
 7. 查询是否启动成功
 ```
 # jps
+1680 NamesrvStartup
+1715 BrokerStartup
 ```
+显示上面两个
