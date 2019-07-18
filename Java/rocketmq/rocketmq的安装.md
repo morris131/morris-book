@@ -9,4 +9,9 @@
 # unzip rocketmq-all-4.4.0-bin-release.zip 
 ```
 若unzip命令不存在则安装:
+```
+# yum install unzip
+```
+
+4. 
 
