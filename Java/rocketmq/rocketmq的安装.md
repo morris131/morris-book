@@ -26,5 +26,7 @@ JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m -XX:MetaspaceSize=128m 
 ```
 
 ```
-
+# nohup sh mqnamesrv &
 ```
+
+6. 
