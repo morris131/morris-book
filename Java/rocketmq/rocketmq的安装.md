@@ -45,4 +45,6 @@ JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m"
 1680 NamesrvStartup
 1715 BrokerStartup
 ```
-显示上面两个
+显示上面两个进程说明启动成功了。
+
+8. 
