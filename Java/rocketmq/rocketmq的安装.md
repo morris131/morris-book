@@ -47,4 +47,4 @@ JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m"
 ```
 显示上面两个进程说明启动成功了。
 
-8. 
+8. 关闭服务
