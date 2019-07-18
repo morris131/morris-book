@@ -48,3 +48,11 @@ JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m"
 显示上面两个进程说明启动成功了。
 
 8. 关闭服务
+```
+# sh mqshutdown broker
+The mqbroker(1715) is running...
+Send shutdown request to mqbroker(1715) OK
+# sh mqshutdown namesrv
+The mqnamesrv(1680) is running...
+Send shutdown request to mqnamesrv(1680) OK
+```
