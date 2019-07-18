@@ -18,3 +18,4 @@ nohup java -jar rocketmq-console-ng-1.0.1.jar --server.port=12581 --rocketmq.con
 4. 浏览器运行 http://192.168.252.10:12581
 
 5. 效果图
+
