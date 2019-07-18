@@ -19,3 +19,4 @@ nohup java -jar rocketmq-console-ng-1.0.1.jar --server.port=12581 --rocketmq.con
 
 5. 效果图
 
+![效果图](https://gitee.com/morris131/morris-book/raw/master/\Java\rocketmq/image/81d652ad-2882-4515-97ba-4eaad67da048.jpg "")
