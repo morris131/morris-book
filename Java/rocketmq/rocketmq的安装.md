@@ -18,4 +18,4 @@
 # ln -s rocketmq-all-4.4.0-bin-release rocketmq
 ```
 
-5. 启动nameserver
+5. 启动name server
