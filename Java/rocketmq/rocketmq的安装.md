@@ -20,7 +20,11 @@
 
 5. 启动name server
 
-先修改启动脚本中的jvm参数，默认为4g，可能会内存不足无法启动
+先修改启动脚本runserver.sh中的jvm参数，默认为4g，可能会内存不足无法启动
+```
+JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=320m"
+
+```
 
 
 
