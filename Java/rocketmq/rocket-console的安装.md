@@ -12,5 +12,5 @@ mvn clean package -Dmaven.test.skip=true
 
 3.  启动服务
 ```
-
+nohup java -jar rocketmq-console-ng-1.0.1.jar --server.port=12581 --rocketmq.config.namesrvAddr=localhost:9876 &
 ```
