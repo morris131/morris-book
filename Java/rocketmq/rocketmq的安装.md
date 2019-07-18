@@ -36,5 +36,10 @@ JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m"
 ```
 
 ```
+# nohup sh mqbroker -n localhost:9876 &
+```
 
+7. 查询是否启动成功
+```
+# jps
 ```
