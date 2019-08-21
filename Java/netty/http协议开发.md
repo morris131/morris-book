@@ -8,9 +8,9 @@ tags: [netty]
 # http协议开发
 
 ## server
-[Server.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/protocol/http/Server.java)
+[Server.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/protocol/file/Server.java)
 ```java
-package com.morris.netty.protocol.http;
+package com.morris.netty.protocol.file;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -19,9 +19,13 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
+import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
+import io.netty.util.CharsetUtil;
 
 public class Server {
 
@@ -38,14 +42,14 @@ public class Server {
                         @Override
                         protected void initChannel(SocketChannel ch)
                                 throws Exception {
-                            ch.pipeline().addLast(new HttpRequestDecoder()); // 请求消息解码器
-                            ch.pipeline().addLast(new HttpObjectAggregator(65536));// 目的是将多个消息转换为单一的request或者response对象
-                            ch.pipeline().addLast(new HttpResponseEncoder());//响应解码器
-                            ch.pipeline().addLast(new ServerHandler());// 业务逻辑
+                            ch.pipeline().addLast(new StringEncoder(CharsetUtil.UTF_8));
+                            ch.pipeline().addLast(new LineBasedFrameDecoder(65536));
+                            ch.pipeline().addLast(new StringDecoder(CharsetUtil.UTF_8));
+                            ch.pipeline().addLast(new ServerHandler());
                         }
                     });
             ChannelFuture future = b.bind("127.0.0.1", port).sync();
-            System.out.println("HTTP服务器启动，网址是 : " + "http://127.0.0.1:" + port);
+            System.out.println("file server is start on:" + port);
             future.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();
@@ -55,57 +59,47 @@ public class Server {
 }
 ```
 
-[ServerHandler.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/protocol/http/ServerHandler.java)
+[ServerHandler.java](https://gitee.com/morris131/morris-book/blob/master/Java/netty/nettyDemo/src/main/java/com/morris/protocol/file/ServerHandler.java)
 ```java
-package com.morris.netty.protocol.http;
+package com.morris.netty.protocol.file;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.DefaultFileRegion;
+import io.netty.channel.FileRegion;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.handler.codec.http.DefaultFullHttpResponse;
-import io.netty.handler.codec.http.FullHttpRequest;
-import io.netty.handler.codec.http.FullHttpResponse;
-import io.netty.util.CharsetUtil;
 
-import static io.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
-import static io.netty.handler.codec.http.HttpResponseStatus.INTERNAL_SERVER_ERROR;
-import static io.netty.handler.codec.http.HttpResponseStatus.OK;
-import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
+import java.io.File;
+import java.io.RandomAccessFile;
 
-public class ServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
+public class ServerHandler extends SimpleChannelInboundHandler<String> {
+
+    private static final String CR = System.getProperty("line.separator");
 
     @Override
-    public void messageReceived(ChannelHandlerContext ctx, FullHttpRequest request) throws Exception {
+    public void messageReceived(ChannelHandlerContext ctx, String msg) throws Exception {
 
-        FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1, OK);
-        response.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
-        ByteBuf buffer = Unpooled.copiedBuffer("<h3>hello world</h3>", CharsetUtil.UTF_8);
-        response.content().writeBytes(buffer);
-        buffer.release();
-        ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
+        File file = new File(msg);
 
-    }
-
-    @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
-            throws Exception {
-        cause.printStackTrace();
-        if (ctx.channel().isActive()) {
-            FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1,
-                    INTERNAL_SERVER_ERROR, Unpooled.copiedBuffer("Failure: " + INTERNAL_SERVER_ERROR.toString()
-                    + "\r\n", CharsetUtil.UTF_8));
-            response.headers().set(CONTENT_TYPE, "text/plain; charset=UTF-8");
-            ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
+        if(!file.exists()) {
+            ctx.writeAndFlush("file not found" + msg + CR);
+            ctx.close();
+            return;
         }
+
+        RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
+
+        FileRegion fileRegion = new DefaultFileRegion(randomAccessFile.getChannel(), 0, randomAccessFile.length());
+
+        ctx.write(fileRegion);
+        ctx.writeAndFlush(CR);
+        randomAccessFile.close();
     }
 
 }
 ```
 
 ## client
-浏览器输入： http://127.0.0.1:8899
+命令行输入：telnet 127.0.0.1 8899 然后输入文件的路径
 
 
 

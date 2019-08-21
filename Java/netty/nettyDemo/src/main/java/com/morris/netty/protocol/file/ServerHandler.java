@@ -18,7 +18,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
         File file = new File(msg);
 
         if(!file.exists()) {
-            ctx.write("file not found" + msg + CR);
+            ctx.writeAndFlush("file not found" + msg + CR);
             ctx.close();
             return;
         }
