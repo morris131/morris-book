@@ -1,8 +1,8 @@
 # 目录
 
 * 后端开发
-	* Java
-		* [java基础](后端开发/Java/java基础)
+    * Java
+        * [java基础](后端开发/Java/java基础)
 		* [JVM](后端开发/Java/JVM)
 		* [Maven](后端开发/Java/Maven)
 		* [spring](后端开发/Java/spring)
@@ -22,7 +22,6 @@
 		* [shell](服务器/Linux/shell)
 		
 * 数据库
-	* MySQL
-	* Oracle
+
 	* [MongoDB](数据库/MongoDB)
 
