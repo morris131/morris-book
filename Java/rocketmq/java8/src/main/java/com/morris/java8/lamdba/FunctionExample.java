@@ -9,7 +9,7 @@ public class FunctionExample {
 
     public static void main(String[] args) {
         List<String> stringList = Arrays.asList("java", "hello", "world", "function");
-        List<Integer> result = getLength(stringList, s -> s.length());
+        List<Integer> result = getLength(stringList, String::length);
         System.out.println(result);
     }
 

@@ -2,8 +2,9 @@ package com.morris.java8.lamdba;
 
 public class RunnableExample {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
+        // 匿名内部类
         new Thread(new Runnable() {
             @Override
             public void run() {

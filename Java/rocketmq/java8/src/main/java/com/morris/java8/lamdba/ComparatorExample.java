@@ -1,9 +1,7 @@
 package com.morris.java8.lamdba;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import com.morris.java8.collector.Dish;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -29,28 +27,18 @@ public class ComparatorExample {
         System.out.println("----------");
 
         // 对对象的单个属性排序
-        List<Computer> list3 = new ArrayList<>();
-        list3.add(new Computer("dell", 3000, 4));
-        list3.add(new Computer("dell", 4000, 5));
-        list3.add(new Computer("lenovo", 3000, 3));
-        list3.add(new Computer("lenovo", 4000, 4));
-        list3.add(new Computer("hp", 5000, 6));
+        List<Dish> list3 = Dish.createList();
         System.out.println("before sort: " + list3);
-        list3.sort(Comparator.comparingDouble(Computer :: getPrice));
+        list3.sort(Comparator.comparingInt(Dish :: getCalories));
         System.out.println("after sort: " + list3);
 
         System.out.println("----------");
 
         // 对对象的多个属性排序
-        List<Computer> list4 = new ArrayList<>();
-        list4.add(new Computer("dell", 3000, 4));
-        list4.add(new Computer("dell", 4000, 5));
-        list4.add(new Computer("lenovo", 3000, 3));
-        list4.add(new Computer("lenovo", 4000, 4));
-        list4.add(new Computer("hp", 5000, 6));
+        List<Dish> list4 = Dish.createList();
         System.out.println("before sort: " + list4);
-        // 先以速度降序，后以价格升序
-        list4.sort(Comparator.comparingInt(Computer::getSpeed).reversed().thenComparingDouble(Computer :: getPrice));
+        // 先以卡路里降序，后以名字升序
+        list4.sort(Comparator.comparingInt(Dish::getCalories).reversed().thenComparing(Dish :: getName));
         System.out.println("after sort: " + list4);
 
     }

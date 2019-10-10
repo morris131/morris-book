@@ -1,5 +1,8 @@
 package com.morris.java8.lamdba;
 
+import com.morris.java8.collector.Dish;
+
+import java.nio.file.DirectoryStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -7,39 +10,33 @@ import java.util.function.Predicate;
 public class PredicateComplexExample {
 
     public static void main(String[] args) {
-        List<Computer> list3 = new ArrayList<>();
-        list3.add(new Computer("dell", 3000, 4));
-        list3.add(new Computer("dell", 4000, 5));
-        list3.add(new Computer("lenovo", 3000, 3));
-        list3.add(new Computer("lenovo", 4000, 4));
-        list3.add(new Computer("hp", 5000, 6));
 
-        // 找出名字为dell的
-        Predicate<Computer> dellPredicate = p -> "dell".equals(p.getName());
-        List<Computer> result1 = filter(list3, dellPredicate);
-        System.out.println(result1);
+        List<Dish> dishList = Dish.createList();
 
-        System.out.println("----------");
+        // 与-and
+        // 找出卡路里>300的蔬菜
+        Predicate<Dish> vegetablePredicate = Dish::isVegetarian;
+        Predicate<Dish> moreThan300Predicate = d -> d.getCalories() >= 300;
+        List<Dish> filter = filter(dishList, vegetablePredicate.and(moreThan300Predicate));
+        System.out.println(filter);
 
-        // 找出名字为dell,价格为3000的
-        Predicate<Computer> pricePredicate = p -> 3000 == p.getPrice();
-        List<Computer> result2 = filter(list3, dellPredicate.and(pricePredicate));
-        System.out.println(result2);
+        // 非-negate
+        // 找出荤菜
+        List<Dish> filter1 = filter(dishList, vegetablePredicate.negate());
+        System.out.println(filter1);
 
-        System.out.println("----------");
-
-        // 找出名字为dell,价格为3000或者速度为3的
-        Predicate<Computer> speedPredicate = p -> 3 == p.getSpeed();
-        List<Computer> result3 = filter(list3, dellPredicate.or(speedPredicate).and(pricePredicate));
-        System.out.println(result3);
+        // 或-or
+        // 找出卡路里大于300或者荤菜
+        List<Dish> filter2 = filter(dishList, vegetablePredicate.or(moreThan300Predicate));
+        System.out.println(filter2);
 
     }
 
-    public static List<Computer> filter(List<Computer> computerList, Predicate<Computer> predicate) {
-        List<Computer> result = new ArrayList<>();
-        for (Computer computer : computerList) {
-            if(predicate.test(computer)) {
-                result.add(computer);
+    public static List<Dish> filter(List<Dish> dishList, Predicate<Dish> predicate) {
+        List<Dish> result = new ArrayList<>();
+        for (Dish dish : dishList) {
+            if(predicate.test(dish)) {
+                result.add(dish);
             }
         }
         return result;

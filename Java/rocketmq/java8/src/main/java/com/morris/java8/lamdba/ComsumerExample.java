@@ -7,6 +7,6 @@ public class ComsumerExample {
 
     public static void main(String[] args) {
         List<Integer> integerList = Arrays.asList(1, 3, 5, 4, 8, 9);
-        integerList.forEach(i -> System.out.println(i));
+        integerList.forEach(System.out::println);
     }
 }
